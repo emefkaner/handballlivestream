@@ -76,19 +76,19 @@ pruefe('setzt das Ende zwei Stunden später', ics.includes('DTEND:20261003T20000
 pruefe('keine Namen ohne ausdrücklichen Wunsch', !ics.includes('Regie:'));
 
 console.log('Titel');
-gleich('eigene Mannschaft zuerst, dann der Gegner',
+gleich('genau "TSB gegen <Gegner>"',
   titel({ eigene: 'TSB', gegner: 'HSG Albstadt', daheim: true }),
   'TSB gegen HSG Albstadt');
-gleich('auswärts wird gekennzeichnet',
-  titel({ eigene: 'SUN', gegner: 'Borussia Dortmund', daheim: false }),
-  'SUN gegen Borussia Dortmund (auswärts)');
-gleich('Pokal auswärts nennt beides',
-  titel({ eigene: 'SUN', gegner: 'Buxtehuder SV', daheim: false, pokal: true }),
-  'SUN gegen Buxtehuder SV (DHB-Pokal, auswärts)');
-gleich('Ergebnis aus eigener Sicht, auch auswärts',
-  titel({ eigene: 'SUN', gegner: 'Borussia Dortmund', daheim: false, gespielt: true, toreEigene: 33, toreGegner: 35 }),
-  'SUN gegen Borussia Dortmund 33:35 (auswärts)');
-gleich('abgesagte Spiele sind als solche erkennbar',
+gleich('genau "SUN gegen <Gegner>"',
+  titel({ eigene: 'SUN', gegner: 'TuS Metzingen', daheim: true }),
+  'SUN gegen TuS Metzingen');
+gleich('Pokalspiele stehen in Klammern dahinter',
+  titel({ eigene: 'SUN', gegner: 'Buxtehuder SV', daheim: true, pokal: true }),
+  'SUN gegen Buxtehuder SV (DHB-Pokal)');
+gleich('das Ergebnis bleibt aus dem Titel heraus',
+  titel({ eigene: 'SUN', gegner: 'Borussia Dortmund', daheim: true, gespielt: true, toreEigene: 33, toreGegner: 35 }),
+  'SUN gegen Borussia Dortmund');
+gleich('nur eine Absage wird im Titel genannt',
   titel({ eigene: 'TSB', gegner: 'HSG Konstanz', daheim: true, abgesagt: true }),
   'ABGESAGT: TSB gegen HSG Konstanz');
 

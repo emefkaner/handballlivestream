@@ -92,24 +92,16 @@ function baueTermin(spiel, gebautAm, kennzeichen, mitBesetzung) {
   return zeilen;
 }
 
-// "TSB gegen HSG Albstadt", "SUN gegen Borussia Dortmund (auswärts)".
-// Die eigene Mannschaft steht immer vorn, damit auf dem Sperrbildschirm
-// sofort klar ist, um wen es geht. Die Liga gehört nicht in den Titel —
-// TSB spielt immer 3. Liga, SUN immer 1. Bundesliga; nur der Pokal fällt
-// aus der Reihe und wird deshalb genannt.
+// Genau "TSB gegen HSG Albstadt" bzw. "SUN gegen TuS Metzingen". Ergebnis,
+// Spieltag und Halle stehen in der Beschreibung des Termins, damit der Titel
+// auf dem Sperrbildschirm vollständig lesbar bleibt.
+//
+// Zwei Zusätze bleiben: Pokalspiele werden als solche gekennzeichnet, weil
+// sie aus der Reihe fallen, und eine Absage steht vorn — wer nur die
+// Terminliste überfliegt, soll nicht umsonst zur Halle fahren.
 export function titel(spiel) {
-  const kern = `${spiel.eigene} gegen ${spiel.gegner}`;
-
-  const zusaetze = [];
-  if (spiel.pokal) zusaetze.push('DHB-Pokal');
-  if (spiel.daheim === false) zusaetze.push('auswärts');
-  const zusatz = zusaetze.length > 0 ? ` (${zusaetze.join(', ')})` : '';
-
-  if (spiel.abgesagt) return `ABGESAGT: ${kern}${zusatz}`;
-  if (spiel.gespielt && Number.isFinite(spiel.toreEigene) && Number.isFinite(spiel.toreGegner)) {
-    return `${kern} ${spiel.toreEigene}:${spiel.toreGegner}${zusatz}`;
-  }
-  return `${kern}${zusatz}`;
+  const kern = `${spiel.eigene} gegen ${spiel.gegner}${spiel.pokal ? ' (DHB-Pokal)' : ''}`;
+  return spiel.abgesagt ? `ABGESAGT: ${kern}` : kern;
 }
 
 function beschreibungText(spiel, mitBesetzung) {

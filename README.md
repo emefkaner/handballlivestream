@@ -56,11 +56,11 @@ Saison und schreibt eine Warnung ins Protokoll.
 
 ## Was im Termin steht
 
-- **Titel**: `TSB gegen HSG Albstadt` bzw. `SUN gegen TuS Metzingen` — die
-  eigene Mannschaft immer zuerst. Ist das Spiel vorbei, steht das Ergebnis aus
-  eigener Sicht dahinter; ist es abgesagt, beginnt der Titel mit `ABGESAGT:`.
-  Pokalspiele werden als solche gekennzeichnet, die Liga nicht: Die TSB spielt
-  immer 3. Liga, Neckarsulm immer 1. Bundesliga.
+- **Titel**: `TSB gegen HSG Albstadt` bzw. `SUN gegen TuS Metzingen` — sonst
+  nichts, damit er auf dem Sperrbildschirm ganz zu lesen ist. Zwei Zusätze
+  gibt es: Pokalspiele bekommen `(DHB-Pokal)` dahinter, eine Absage steht als
+  `ABGESAGT:` davor. Ergebnis, Spieltag und Halle stehen in der Beschreibung
+  des Termins.
 - **Dauer**: zwei Stunden ab Anpfiff. Die Quellen nennen kein Spielende;
   2 × 30 Minuten plus Pause und Ein-/Auslauf sind die ehrliche Schätzung
   (`SPIELDAUER_MINUTEN` in `src/ics.mjs`).
