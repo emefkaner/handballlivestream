@@ -1,1 +1,5 @@
 node_modules/
+
+# Erzeugte Dateien schreibt nur der Actions-Lauf (dort mit "git add -f docs").
+# Lokal ignoriert, damit Handarbeit und Automat nicht in Konflikt geraten.
+docs/
