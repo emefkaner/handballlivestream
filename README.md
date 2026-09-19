@@ -96,6 +96,25 @@ stillschweigend unterzugehen. Beim ersten Lauf waren das zwei Fälle: das
 TSB-Pokalspiel am 21.08.2026 (steht nicht im Ligaspielplan) und NSU–Dortmund,
 in der Tabelle am 23.01.2027, offiziell am 20.01.2027.
 
+## Kalender für einzelne Personen
+
+Neben dem Gesamtkalender entsteht für jede Person aus `src/personen.mjs` eine
+eigene Datei mit ausschließlich den eigenen Einsätzen:
+
+| Person | Adresse |
+|---|---|
+| Oliver Amann | `…/docs/oliver-amann.ics` |
+| Andreas Krieger | `…/docs/andreas-krieger.ics` |
+| Markus Krieger | `…/docs/markus-krieger.ics` |
+| Tanja Krieger | `…/docs/tanja-krieger.ics` |
+
+Im Titel steht dort zusätzlich die eigene Aufgabe, also `TSB gegen HSG Albstadt
+(Kamera 1)`. Wer in einem Spiel zwei Aufgaben hat, sieht beide.
+
+Eine weitere Person bekommt ihren Kalender, indem sie in `PERSONEN` eingetragen
+wird — `schreibweisen` fängt ab, dass der Name in der Tabelle mal abgekürzt
+steht. Verglichen wird ohne Rücksicht auf Groß- und Kleinschreibung.
+
 ## Auf welchen Geräten das läuft
 
 - **iPhone/iPad**: `webcal://`-Link antippen, abonnieren, fertig.

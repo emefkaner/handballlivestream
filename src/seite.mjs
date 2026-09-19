@@ -50,7 +50,20 @@ function einteilungsZeile(besetzung) {
   return `<div class="team">${schuetze(teile.join(' · '))}</div>`;
 }
 
-export function baueSeite({ spiele, gebautAm, saison, dateiname, mitBesetzung = false, name }) {
+// Adresse einer Datei neben der Übersichtsseite — dieselbe Ableitung wie
+// für den Hauptkalender, damit sie auch über raw.githubusercontent stimmt.
+function rohAdresseFuer(datei) {
+  return ROH_ADRESSE.replace(/[^/]+$/, datei);
+}
+
+export function baueSeite({ spiele, gebautAm, saison, dateiname, mitBesetzung = false, persoenliche = [], name }) {
+  const personenZeilen = persoenliche.map(({ person, anzahl }) => `
+      <li>
+        <strong>${schuetze(person.name)}</strong>
+        <span class="einsaetze">${anzahl} ${anzahl === 1 ? 'Einsatz' : 'Einsätze'}</span>
+        <code>${schuetze(rohAdresseFuer(person.datei))}</code>
+      </li>`).join('');
+
   const kommende = spiele.filter((s) => s.beginn > gebautAm).slice(0, 12);
   const zeilen = kommende.map((s) => `
       <tr>
@@ -109,6 +122,10 @@ export function baueSeite({ spiele, gebautAm, saison, dateiname, mitBesetzung = 
   p.warnung { color: var(--gedaempft); font-size: .9rem; }
   .team { color: var(--gedaempft); font-size: .82rem; margin-top: .2rem; }
   code { font-size: .82rem; overflow-wrap: anywhere; }
+  ul.personen { list-style: none; padding: 0; margin: 0; }
+  ul.personen li { border-bottom: 1px solid var(--rand); padding: .7rem 0; }
+  ul.personen code { display: block; margin-top: .25rem; color: var(--gedaempft); }
+  .einsaetze { color: var(--gedaempft); font-size: .85rem; margin-left: .5rem; }
 </style>
 </head>
 <body>
@@ -147,6 +164,12 @@ export function baueSeite({ spiele, gebautAm, saison, dateiname, mitBesetzung = 
   <p class="warnung">Google holt sich abonnierte Kalender erfahrungsgemäß nur alle paar Stunden bis
   einmal am Tag — eine Änderung kann dort also später ankommen als auf dem iPhone. Das liegt an Google,
   nicht am Kalender selbst.</p>
+
+  ${personenZeilen ? `<h2>Kalender für einzelne Personen</h2>
+  <p>Wer nur die eigenen Einsätze sehen will, abonniert stattdessen einen dieser Kalender.
+  Im Titel steht dann die eigene Aufgabe, also <em>Regie</em> oder <em>Kamera</em>.</p>
+  <ul class="personen">${personenZeilen}
+  </ul>` : ''}
 
   <h2>Nächste Termine</h2>
   ${mitBesetzung ? '<p class="warnung">Bei den Heimspielen steht im Termin, wer für Regie und Kamera eingeteilt ist.</p>' : ''}

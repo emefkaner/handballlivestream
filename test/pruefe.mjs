@@ -6,6 +6,7 @@ import { baueKalender, titel, SPIELDAUER_MINUTEN } from '../src/ics.mjs';
 import { leseCsv, leseDatum, ortsDatum } from '../src/dienstplan.mjs';
 import { mannschaftsName, ligaKurz } from '../src/namen.mjs';
 import { saisonBezeichnung } from '../src/quellen.mjs';
+import { PERSONEN, aufgabeIm, spieleVon } from '../src/personen.mjs';
 
 let fehler = 0;
 
@@ -45,6 +46,37 @@ gleich('Datum mit Punkten', leseDatum('Samstag 21.08.2026'), '2026-08-21');
 gleich('Zeitraum ergibt keinen Termin', leseDatum('22.-24.09.2026'), null);
 gleich('Zeitraum mit Schrägstrich ebenso', leseDatum('10./11.04.2027'), null);
 gleich('Spätabend zählt zum deutschen Kalendertag', ortsDatum(new Date('2026-12-05T19:00:00Z')), '2026-12-05');
+
+console.log('Persönliche Kalender');
+const oliver = PERSONEN.find((p) => p.name === 'Oliver Amann');
+const tanja = PERSONEN.find((p) => p.name === 'Tanja Krieger');
+const einsatz = {
+  besetzung: { regie: 'emefka', kamera1: 'Tanja Krieger', kamera2: 'Oliver Amann' },
+};
+gleich('findet die eigene Aufgabe', aufgabeIm(einsatz, oliver), 'Kamera 2');
+gleich('und die der anderen', aufgabeIm(einsatz, tanja), 'Kamera 1');
+gleich('wer nicht eingeteilt ist, bekommt nichts',
+  aufgabeIm({ besetzung: { regie: 'emefka' } }, oliver), null);
+gleich('Schreibweise ohne Rücksicht auf Groß- und Kleinschreibung',
+  aufgabeIm({ besetzung: { regie: '  oliver amann ' } }, oliver), 'Regie');
+gleich('doppelte Einteilung nennt beide Aufgaben',
+  aufgabeIm({ besetzung: { regie: 'Oliver Amann', kamera1: 'Oliver Amann' } }, oliver),
+  'Regie + Kamera 1');
+gleich('ohne Dienstplan kein Einsatz', aufgabeIm({}, oliver), null);
+
+const auswahl = spieleVon(
+  [
+    { kennung: 'a', besetzung: { regie: 'Oliver Amann' } },
+    { kennung: 'b', besetzung: { regie: 'emefka', kamera1: 'Tanja Krieger' } },
+    { kennung: 'c' },
+  ],
+  oliver,
+);
+gleich('nimmt nur die eigenen Spiele', auswahl.length, 1);
+gleich('und merkt sich die Aufgabe', auswahl[0].rolle, 'Regie');
+gleich('die Aufgabe steht im Titel',
+  titel({ eigene: 'TSB', gegner: 'HSG Albstadt', rolle: 'Kamera 1' }),
+  'TSB gegen HSG Albstadt (Kamera 1)');
 
 console.log('Kalenderdatei');
 const beispiel = [{

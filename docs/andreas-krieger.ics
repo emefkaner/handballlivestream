@@ -1,0 +1,66 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//andreas-krieger.handballlivestream.emefkaner.github.io//Handball-Kalender//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Livestream: Andreas Krieger
+NAME:Livestream: Andreas Krieger
+X-WR-CALDESC:Die Einsätze von Andreas Krieger beim Livestream der TSB Hunt
+ ers und der Sport-Union Neckarsulm. Im Titel steht die eigene Aufgabe. Wir
+ d zweimal täglich automatisch aktualisiert.
+DESCRIPTION:Die Einsätze von Andreas Krieger beim Livestream der TSB Hunte
+ rs und der Sport-Union Neckarsulm. Im Titel steht die eigene Aufgabe. Wird
+  zweimal täglich automatisch aktualisiert.
+X-WR-TIMEZONE:Europe/Berlin
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:hbf-bundesliga-89686@andreas-krieger.handballlivestream.emefkaner.githu
+ b.io
+DTSTAMP:20260919T192004Z
+DTSTART:20260829T160000Z
+DTEND:20260829T180000Z
+SUMMARY:SUN gegen HSG Bensheim/Auerbach (Regie)
+DESCRIPTION:SU Neckarsulm – HSG Bensheim/Auerbach\n1. Bundesliga Frauen\n
+ Spieltag 1\nEndstand: SU Neckarsulm 22:34 HSG Bensheim/Auerbach\n\nLivestr
+ eam-Team\nRegie: Andreas Krieger\nKamera 1: Tanja Krieger\nKamera 2: Max\n
+ Anwesenheit: 16:00 Uhr\nQuelle: https://www.alsco-hbf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:tsb-2627DHB3LERMD0202@andreas-krieger.handballlivestream.emefkaner.gith
+ ub.io
+DTSTAMP:20260919T192004Z
+DTSTART:20260905T180000Z
+DTEND:20260905T200000Z
+SUMMARY:TSB gegen HC Oppenweiler/Backnang (Regie)
+LOCATION:Stauwehrhalle
+DESCRIPTION:TSB Hunters – HC Oppenweiler/Backnang\n3. Liga Männer - Süd
+ \nHalle: Stauwehrhalle\nEndstand: TSB Hunters 29:35 HC Oppenweiler/Backnan
+ g\n\nLivestream-Team\nRegie: Andreas Krieger\nKamera 1: Oliver Amann\nQuel
+ le: https://tsb-horkheim-hunters.de/calendar
+URL:https://tsb-horkheim-hunters.de/calendar
+CATEGORIES:TSB Hunters
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89699@andreas-krieger.handballlivestream.emefkaner.githu
+ b.io
+DTSTAMP:20260919T192004Z
+DTSTART:20260912T160000Z
+DTEND:20260912T180000Z
+SUMMARY:SUN gegen Buxtehuder SV (Regie)
+DESCRIPTION:SU Neckarsulm – Buxtehuder SV\n1. Bundesliga Frauen\nSpieltag
+  3\nEndstand: SU Neckarsulm 26:27 Buxtehuder SV\n\nLivestream-Team\nRegie:
+  Andreas Krieger\nKamera 1: Tanja Krieger\nKamera 2: Max\nAnwesenheit: 16:
+ 00 Uhr\nQuelle: https://www.alsco-hbf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

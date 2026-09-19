@@ -99,8 +99,15 @@ function baueTermin(spiel, gebautAm, kennzeichen, mitBesetzung) {
 // Zwei Zusätze bleiben: Pokalspiele werden als solche gekennzeichnet, weil
 // sie aus der Reihe fallen, und eine Absage steht vorn — wer nur die
 // Terminliste überfliegt, soll nicht umsonst zur Halle fahren.
+// In den persönlichen Kalendern steht zusätzlich die eigene Aufgabe (`rolle`),
+// damit man auf einen Blick weiß, ob man an der Regie oder an der Kamera ist.
 export function titel(spiel) {
-  const kern = `${spiel.eigene} gegen ${spiel.gegner}${spiel.pokal ? ' (DHB-Pokal)' : ''}`;
+  const zusaetze = [];
+  if (spiel.pokal) zusaetze.push('DHB-Pokal');
+  if (spiel.rolle) zusaetze.push(spiel.rolle);
+
+  const kern = `${spiel.eigene} gegen ${spiel.gegner}` +
+    (zusaetze.length > 0 ? ` (${zusaetze.join(', ')})` : '');
   return spiel.abgesagt ? `ABGESAGT: ${kern}` : kern;
 }
 

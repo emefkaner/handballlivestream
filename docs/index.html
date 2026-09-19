@@ -47,12 +47,16 @@
   p.warnung { color: var(--gedaempft); font-size: .9rem; }
   .team { color: var(--gedaempft); font-size: .82rem; margin-top: .2rem; }
   code { font-size: .82rem; overflow-wrap: anywhere; }
+  ul.personen { list-style: none; padding: 0; margin: 0; }
+  ul.personen li { border-bottom: 1px solid var(--rand); padding: .7rem 0; }
+  ul.personen code { display: block; margin-top: .25rem; color: var(--gedaempft); }
+  .einsaetze { color: var(--gedaempft); font-size: .85rem; margin-left: .5rem; }
 </style>
 </head>
 <body>
 <main>
   <h1>Handball-Livestreams-Unterland (emefka)</h1>
-  <p class="stand">Saison 2026/2027 · 26 Termine · zuletzt gebaut am Sa., 19.09.2026, 21:02 Uhr</p>
+  <p class="stand">Saison 2026/2027 · 26 Termine · zuletzt gebaut am Sa., 19.09.2026, 21:20 Uhr</p>
 
   <h2>Abonnieren</h2>
   <p>Diese Adresse kopieren:</p>
@@ -85,6 +89,32 @@
   <p class="warnung">Google holt sich abonnierte Kalender erfahrungsgemäß nur alle paar Stunden bis
   einmal am Tag — eine Änderung kann dort also später ankommen als auf dem iPhone. Das liegt an Google,
   nicht am Kalender selbst.</p>
+
+  <h2>Kalender für einzelne Personen</h2>
+  <p>Wer nur die eigenen Einsätze sehen will, abonniert stattdessen einen dieser Kalender.
+  Im Titel steht dann die eigene Aufgabe, also <em>Regie</em> oder <em>Kamera</em>.</p>
+  <ul class="personen">
+      <li>
+        <strong>Oliver Amann</strong>
+        <span class="einsaetze">18 Einsätze</span>
+        <code>https://raw.githubusercontent.com/emefkaner/handballlivestream/main/docs/oliver-amann.ics</code>
+      </li>
+      <li>
+        <strong>Andreas Krieger</strong>
+        <span class="einsaetze">3 Einsätze</span>
+        <code>https://raw.githubusercontent.com/emefkaner/handballlivestream/main/docs/andreas-krieger.ics</code>
+      </li>
+      <li>
+        <strong>Markus Krieger</strong>
+        <span class="einsaetze">6 Einsätze</span>
+        <code>https://raw.githubusercontent.com/emefkaner/handballlivestream/main/docs/markus-krieger.ics</code>
+      </li>
+      <li>
+        <strong>Tanja Krieger</strong>
+        <span class="einsaetze">10 Einsätze</span>
+        <code>https://raw.githubusercontent.com/emefkaner/handballlivestream/main/docs/tanja-krieger.ics</code>
+      </li>
+  </ul>
 
   <h2>Nächste Termine</h2>
   <p class="warnung">Bei den Heimspielen steht im Termin, wer für Regie und Kamera eingeteilt ist.</p>

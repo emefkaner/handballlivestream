@@ -1,0 +1,112 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//markus-krieger.handballlivestream.emefkaner.github.io//Handball-Kalender//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Livestream: Markus Krieger
+NAME:Livestream: Markus Krieger
+X-WR-CALDESC:Die Einsätze von Markus Krieger beim Livestream der TSB Hunte
+ rs und der Sport-Union Neckarsulm. Im Titel steht die eigene Aufgabe. Wird
+  zweimal täglich automatisch aktualisiert.
+DESCRIPTION:Die Einsätze von Markus Krieger beim Livestream der TSB Hunter
+ s und der Sport-Union Neckarsulm. Im Titel steht die eigene Aufgabe. Wird 
+ zweimal täglich automatisch aktualisiert.
+X-WR-TIMEZONE:Europe/Berlin
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:tsb-2627DHB3LERMD0405@markus-krieger.handballlivestream.emefkaner.githu
+ b.io
+DTSTAMP:20260919T192004Z
+DTSTART:20260912T180000Z
+DTEND:20260912T200000Z
+SUMMARY:TSB gegen VfL Pfullingen (Regie)
+LOCATION:Stauwehrhalle
+DESCRIPTION:TSB Hunters – VfL Pfullingen\n3. Liga Männer - Süd\nHalle: 
+ Stauwehrhalle\nEndstand: TSB Hunters 34:44 VfL Pfullingen\n\nLivestream-Te
+ am\nRegie: Markus Krieger\nKamera 1: Oliver Amann\nQuelle: https://tsb-hor
+ kheim-hunters.de/calendar
+URL:https://tsb-horkheim-hunters.de/calendar
+CATEGORIES:TSB Hunters
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89712@markus-krieger.handballlivestream.emefkaner.github
+ .io
+DTSTAMP:20260919T192004Z
+DTSTART:20261007T173000Z
+DTEND:20261007T193000Z
+SUMMARY:SUN gegen Frisch Auf Göppingen (Kamera 2)
+DESCRIPTION:SU Neckarsulm – Frisch Auf Göppingen\n1. Bundesliga Frauen\n
+ Spieltag 5\n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\nKam
+ era 2: Markus Krieger\nAnwesenheit: 17:30 Uhr\nQuelle: https://www.alsco-h
+ bf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89725@markus-krieger.handballlivestream.emefkaner.github
+ .io
+DTSTAMP:20260919T192004Z
+DTSTART:20261031T140000Z
+DTEND:20261031T160000Z
+SUMMARY:SUN gegen HSG Blomberg-Lippe (Kamera 2)
+DESCRIPTION:SU Neckarsulm – HSG Blomberg-Lippe\n1. Bundesliga Frauen\nSpi
+ eltag 7\n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\nKamera
+  2: Markus Krieger\nAnwesenheit: 13:00 Uhr\nQuelle: https://www.alsco-hbf.
+ de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89738@markus-krieger.handballlivestream.emefkaner.github
+ .io
+DTSTAMP:20260919T192004Z
+DTSTART:20261121T170000Z
+DTEND:20261121T190000Z
+SUMMARY:SUN gegen Thüringer HC (Kamera 2)
+DESCRIPTION:SU Neckarsulm – Thüringer HC\n1. Bundesliga Frauen\nSpieltag
+  9\n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\nKamera 2: M
+ arkus Krieger\nAnwesenheit: 16:00 Uhr\nQuelle: https://www.alsco-hbf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89751@markus-krieger.handballlivestream.emefkaner.github
+ .io
+DTSTAMP:20260919T192004Z
+DTSTART:20270102T170000Z
+DTEND:20270102T190000Z
+SUMMARY:SUN gegen SV Union Halle-Neustadt (Kamera 2)
+DESCRIPTION:SU Neckarsulm – SV Union Halle-Neustadt\n1. Bundesliga Frauen
+ \nSpieltag 11\n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\n
+ Kamera 2: Markus Krieger\nAnwesenheit: 16:00 Uhr\nQuelle: https://www.alsc
+ o-hbf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89762@markus-krieger.handballlivestream.emefkaner.github
+ .io
+DTSTAMP:20260919T192004Z
+DTSTART:20270120T183000Z
+DTEND:20270120T203000Z
+SUMMARY:SUN gegen Borussia Dortmund (Kamera 2)
+DESCRIPTION:SU Neckarsulm – Borussia Dortmund\n1. Bundesliga Frauen\nSpie
+ ltag 13\n\nLivestream-Team\nKamera 2: Markus Krieger\nAnwesenheit: 17:30 U
+ hr\nQuelle: https://www.alsco-hbf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

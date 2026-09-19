@@ -12,6 +12,7 @@ import { holeDienstplan, verknuepfe } from './dienstplan.mjs';
 import { mannschaftsName, ligaKurz } from './namen.mjs';
 import { baueKalender } from './ics.mjs';
 import { baueSeite } from './seite.mjs';
+import { PERSONEN, spieleVon } from './personen.mjs';
 
 const KENNZEICHEN = 'handballlivestream.emefkaner.github.io';
 const AUSGABE = new URL('../docs/', import.meta.url).pathname;
@@ -111,6 +112,40 @@ async function main() {
     'utf8',
   );
 
+  // Persönliche Kalender: nur die eigenen Einsätze, mit der eigenen Aufgabe
+  // im Titel. Ohne Dienstplan gibt es sie nicht — dann wüsste niemand, wer
+  // eingeteilt ist.
+  const persoenliche = [];
+  if (dienstplanSteht) {
+    for (const person of PERSONEN) {
+      const eigene = spieleVon(spiele, person);
+      persoenliche.push({ person, anzahl: eigene.length });
+
+      if (eigene.length === 0) {
+        protokoll.push(`Hinweis: Für ${person.name} steht im Dienstplan kein Einsatz. Der Kalender bleibt leer.`);
+      }
+
+      await writeFile(
+        join(AUSGABE, person.datei),
+        baueKalender({
+          name: `Livestream: ${person.name}`,
+          beschreibung:
+            `Die Einsätze von ${person.name} beim Livestream der TSB Hunters und der ` +
+            'Sport-Union Neckarsulm. Im Titel steht die eigene Aufgabe. ' +
+            'Wird zweimal täglich automatisch aktualisiert.',
+          spiele: eigene,
+          gebautAm,
+          // Eigenes Kennzeichen, damit die Termin-Kennungen sich von denen
+          // des Hauptkalenders unterscheiden. Wer beide abonniert, bekommt
+          // sonst in manchen Apps Ärger.
+          kennzeichen: `${person.datei.replace('.ics', '')}.${KENNZEICHEN}`,
+          mitBesetzung: true,
+        }),
+        'utf8',
+      );
+    }
+  }
+
   await writeFile(
     join(AUSGABE, 'index.html'),
     baueSeite({
@@ -119,6 +154,7 @@ async function main() {
       saison,
       dateiname: SPIELPLAN_DATEI,
       mitBesetzung: dienstplanSteht,
+      persoenliche,
       name: NAME_SPIELPLAN,
     }),
     'utf8',
@@ -131,6 +167,9 @@ async function main() {
   console.log(`\nGeschrieben: docs/${SPIELPLAN_DATEI}`);
   console.log(`Termine gesamt: ${spiele.length} (TSB: ${huntersHeimspiele.length}, Neckarsulm: ${nsuHeimspiele.length}) — nur Heimspiele`);
   console.log(`Davon mit Livestream-Besetzung: ${mitBesetzung}`);
+  for (const { person, anzahl } of persoenliche) {
+    console.log(`  ${person.name}: ${anzahl} Einsätze -> docs/${person.datei}`);
+  }
   const naechstes = spiele.find((s) => s.beginn > gebautAm);
   if (naechstes) {
     console.log(`Nächster Termin: ${naechstes.beginn.toISOString()} ${naechstes.heim} – ${naechstes.gast}`);

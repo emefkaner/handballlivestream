@@ -1,0 +1,172 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//tanja-krieger.handballlivestream.emefkaner.github.io//Handball-Kalender//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Livestream: Tanja Krieger
+NAME:Livestream: Tanja Krieger
+X-WR-CALDESC:Die Einsätze von Tanja Krieger beim Livestream der TSB Hunter
+ s und der Sport-Union Neckarsulm. Im Titel steht die eigene Aufgabe. Wird 
+ zweimal täglich automatisch aktualisiert.
+DESCRIPTION:Die Einsätze von Tanja Krieger beim Livestream der TSB Hunters
+  und der Sport-Union Neckarsulm. Im Titel steht die eigene Aufgabe. Wird z
+ weimal täglich automatisch aktualisiert.
+X-WR-TIMEZONE:Europe/Berlin
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:hbf-bundesliga-89686@tanja-krieger.handballlivestream.emefkaner.github.
+ io
+DTSTAMP:20260919T192004Z
+DTSTART:20260829T160000Z
+DTEND:20260829T180000Z
+SUMMARY:SUN gegen HSG Bensheim/Auerbach (Kamera 1)
+DESCRIPTION:SU Neckarsulm – HSG Bensheim/Auerbach\n1. Bundesliga Frauen\n
+ Spieltag 1\nEndstand: SU Neckarsulm 22:34 HSG Bensheim/Auerbach\n\nLivestr
+ eam-Team\nRegie: Andreas Krieger\nKamera 1: Tanja Krieger\nKamera 2: Max\n
+ Anwesenheit: 16:00 Uhr\nQuelle: https://www.alsco-hbf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89699@tanja-krieger.handballlivestream.emefkaner.github.
+ io
+DTSTAMP:20260919T192004Z
+DTSTART:20260912T160000Z
+DTEND:20260912T180000Z
+SUMMARY:SUN gegen Buxtehuder SV (Kamera 1)
+DESCRIPTION:SU Neckarsulm – Buxtehuder SV\n1. Bundesliga Frauen\nSpieltag
+  3\nEndstand: SU Neckarsulm 26:27 Buxtehuder SV\n\nLivestream-Team\nRegie:
+  Andreas Krieger\nKamera 1: Tanja Krieger\nKamera 2: Max\nAnwesenheit: 16:
+ 00 Uhr\nQuelle: https://www.alsco-hbf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89712@tanja-krieger.handballlivestream.emefkaner.github.
+ io
+DTSTAMP:20260919T192004Z
+DTSTART:20261007T173000Z
+DTEND:20261007T193000Z
+SUMMARY:SUN gegen Frisch Auf Göppingen (Kamera 1)
+DESCRIPTION:SU Neckarsulm – Frisch Auf Göppingen\n1. Bundesliga Frauen\n
+ Spieltag 5\n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\nKam
+ era 2: Markus Krieger\nAnwesenheit: 17:30 Uhr\nQuelle: https://www.alsco-h
+ bf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89725@tanja-krieger.handballlivestream.emefkaner.github.
+ io
+DTSTAMP:20260919T192004Z
+DTSTART:20261031T140000Z
+DTEND:20261031T160000Z
+SUMMARY:SUN gegen HSG Blomberg-Lippe (Kamera 1)
+DESCRIPTION:SU Neckarsulm – HSG Blomberg-Lippe\n1. Bundesliga Frauen\nSpi
+ eltag 7\n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\nKamera
+  2: Markus Krieger\nAnwesenheit: 13:00 Uhr\nQuelle: https://www.alsco-hbf.
+ de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89738@tanja-krieger.handballlivestream.emefkaner.github.
+ io
+DTSTAMP:20260919T192004Z
+DTSTART:20261121T170000Z
+DTEND:20261121T190000Z
+SUMMARY:SUN gegen Thüringer HC (Kamera 1)
+DESCRIPTION:SU Neckarsulm – Thüringer HC\n1. Bundesliga Frauen\nSpieltag
+  9\n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\nKamera 2: M
+ arkus Krieger\nAnwesenheit: 16:00 Uhr\nQuelle: https://www.alsco-hbf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89751@tanja-krieger.handballlivestream.emefkaner.github.
+ io
+DTSTAMP:20260919T192004Z
+DTSTART:20270102T170000Z
+DTEND:20270102T190000Z
+SUMMARY:SUN gegen SV Union Halle-Neustadt (Kamera 1)
+DESCRIPTION:SU Neckarsulm – SV Union Halle-Neustadt\n1. Bundesliga Frauen
+ \nSpieltag 11\n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\n
+ Kamera 2: Markus Krieger\nAnwesenheit: 16:00 Uhr\nQuelle: https://www.alsc
+ o-hbf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89773@tanja-krieger.handballlivestream.emefkaner.github.
+ io
+DTSTAMP:20260919T192004Z
+DTSTART:20270206T170000Z
+DTEND:20270206T190000Z
+SUMMARY:SUN gegen VfL Oldenburg (Kamera 1)
+DESCRIPTION:SU Neckarsulm – VfL Oldenburg\n1. Bundesliga Frauen\nSpieltag
+  15\n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\nKamera 2: 
+ Oliver Amann\nAnwesenheit: 16:00 Uhr\nQuelle: https://www.alsco-hbf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89784@tanja-krieger.handballlivestream.emefkaner.github.
+ io
+DTSTAMP:20260919T192004Z
+DTSTART:20270220T170000Z
+DTEND:20270220T190000Z
+SUMMARY:SUN gegen TuS Metzingen (Kamera 1)
+DESCRIPTION:SU Neckarsulm – TuS Metzingen\n1. Bundesliga Frauen\nSpieltag
+  17\n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\nKamera 2: 
+ Oliver Amann\nAnwesenheit: 16:00 Uhr\nQuelle: https://www.alsco-hbf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89795@tanja-krieger.handballlivestream.emefkaner.github.
+ io
+DTSTAMP:20260919T192004Z
+DTSTART:20270313T170000Z
+DTEND:20270313T190000Z
+SUMMARY:SUN gegen BSV Sachsen Zwickau (Kamera 1)
+DESCRIPTION:SU Neckarsulm – BSV Sachsen Zwickau\n1. Bundesliga Frauen\nSp
+ ieltag 19\n\nLivestream-Team\nKamera 1: Tanja Krieger\nAnwesenheit: 16:00 
+ Uhr\nQuelle: https://www.alsco-hbf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89806@tanja-krieger.handballlivestream.emefkaner.github.
+ io
+DTSTAMP:20260919T192004Z
+DTSTART:20270327T170000Z
+DTEND:20270327T190000Z
+SUMMARY:SUN gegen HC Leipzig (Kamera 1)
+DESCRIPTION:SU Neckarsulm – HC Leipzig\n1. Bundesliga Frauen\nSpieltag 21
+ \n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\nKamera 2: Oli
+ ver Amann\nAnwesenheit: 16:00 Uhr\nQuelle: https://www.alsco-hbf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
