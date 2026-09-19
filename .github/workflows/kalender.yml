@@ -37,17 +37,19 @@ jobs:
 
       - name: Kalender erzeugen
         env:
-          # Optional: schwer zu erratender Dateiname für die Fassung mit der
-          # Team-Einteilung. Ohne dieses Secret heißt sie schlicht dienstplan.ics.
-          DIENSTPLAN_DATEI: ${{ secrets.DIENSTPLAN_DATEI }}
-          # Auf '1' setzen, um die Fassung mit Namen gar nicht erst zu bauen.
+          # Repository-Variable OHNE_DIENSTPLAN auf '1' setzen, wenn im
+          # Kalender keine Namen stehen sollen (dann bleibt es beim Spielplan).
           OHNE_DIENSTPLAN: ${{ vars.OHNE_DIENSTPLAN }}
         run: npm run build
 
       - name: Erzeugte Dateien prüfen
         run: npm test
 
+      # enablement schaltet GitHub Pages beim ersten Lauf selbst ein, damit
+      # dafür niemand in die Einstellungen klicken muss.
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
