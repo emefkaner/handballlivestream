@@ -18,12 +18,13 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:hbf-pokal-90066@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20260821T170000Z
 DTEND:20260821T190000Z
-SUMMARY:Bergischer HC 06 – SU Neckarsulm 27:30 (DHB-Pokal)
-DESCRIPTION:DHB-Pokal Frauen\nSpieltag 1\nEndstand: 27:30\nQuelle: https://
- www.alsco-hbf.de/
+SUMMARY:SUN gegen Bergischer HC 06 30:27 (DHB-Pokal\, auswärts)
+DESCRIPTION:Bergischer HC 06 – SU Neckarsulm\nDHB-Pokal Frauen\nSpieltag 
+ 1\nEndstand: Bergischer HC 06 27:30 SU Neckarsulm\nQuelle: https://www.als
+ co-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -31,13 +32,14 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89686@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20260829T160000Z
 DTEND:20260829T180000Z
-SUMMARY:SU Neckarsulm – HSG Bensheim/Auerbach 22:34 (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 1\nEndstand: 22:34\n\nLivestream
- -Team\nRegie: Andreas Krieger\nKamera 1: Tanja Krieger\nKamera 2: Max\nAnw
- esenheit: 16:00 Uhr\nQuelle: https://www.alsco-hbf.de/
+SUMMARY:SUN gegen HSG Bensheim/Auerbach 22:34
+DESCRIPTION:SU Neckarsulm – HSG Bensheim/Auerbach\n1. Bundesliga Frauen\n
+ Spieltag 1\nEndstand: SU Neckarsulm 22:34 HSG Bensheim/Auerbach\n\nLivestr
+ eam-Team\nRegie: Andreas Krieger\nKamera 1: Tanja Krieger\nKamera 2: Max\n
+ Anwesenheit: 16:00 Uhr\nQuelle: https://www.alsco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -45,12 +47,13 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89696@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20260902T173000Z
 DTEND:20260902T193000Z
-SUMMARY:Borussia Dortmund – SU Neckarsulm 35:33 (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 2\nEndstand: 35:33\nQuelle: http
- s://www.alsco-hbf.de/
+SUMMARY:SUN gegen Borussia Dortmund 33:35 (auswärts)
+DESCRIPTION:Borussia Dortmund – SU Neckarsulm\n1. Bundesliga Frauen\nSpie
+ ltag 2\nEndstand: Borussia Dortmund 35:33 SU Neckarsulm\nQuelle: https://w
+ ww.alsco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -58,14 +61,15 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tsb-2627DHB3LERMD0202@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20260905T180000Z
 DTEND:20260905T200000Z
-SUMMARY:TSB Hunters – HC Oppenweiler/Backnang 29:35 (3. Liga Süd)
+SUMMARY:TSB gegen HC Oppenweiler/Backnang 29:35
 LOCATION:Stauwehrhalle
-DESCRIPTION:3. Liga Männer - Süd\nHalle: Stauwehrhalle\nEndstand: 29:35\n
- \nLivestream-Team\nRegie: Andreas Krieger\nKamera 1: Oliver Amann\nQuelle:
-  https://tsb-horkheim-hunters.de/calendar
+DESCRIPTION:TSB Hunters – HC Oppenweiler/Backnang\n3. Liga Männer - Süd
+ \nHalle: Stauwehrhalle\nEndstand: TSB Hunters 29:35 HC Oppenweiler/Backnan
+ g\n\nLivestream-Team\nRegie: Andreas Krieger\nKamera 1: Oliver Amann\nQuel
+ le: https://tsb-horkheim-hunters.de/calendar
 URL:https://tsb-horkheim-hunters.de/calendar
 CATEGORIES:TSB Hunters
 STATUS:CONFIRMED
@@ -73,13 +77,14 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89699@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20260912T160000Z
 DTEND:20260912T180000Z
-SUMMARY:SU Neckarsulm – Buxtehuder SV 26:27 (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 3\nEndstand: 26:27\n\nLivestream
- -Team\nRegie: Andreas Krieger\nKamera 1: Tanja Krieger\nKamera 2: Max\nAnw
- esenheit: 16:00 Uhr\nQuelle: https://www.alsco-hbf.de/
+SUMMARY:SUN gegen Buxtehuder SV 26:27
+DESCRIPTION:SU Neckarsulm – Buxtehuder SV\n1. Bundesliga Frauen\nSpieltag
+  3\nEndstand: SU Neckarsulm 26:27 Buxtehuder SV\n\nLivestream-Team\nRegie:
+  Andreas Krieger\nKamera 1: Tanja Krieger\nKamera 2: Max\nAnwesenheit: 16:
+ 00 Uhr\nQuelle: https://www.alsco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -87,14 +92,15 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tsb-2627DHB3LERMD0405@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20260912T180000Z
 DTEND:20260912T200000Z
-SUMMARY:TSB Hunters – VfL Pfullingen 34:44 (3. Liga Süd)
+SUMMARY:TSB gegen VfL Pfullingen 34:44
 LOCATION:Stauwehrhalle
-DESCRIPTION:3. Liga Männer - Süd\nHalle: Stauwehrhalle\nEndstand: 34:44\n
- \nLivestream-Team\nRegie: Markus Krieger\nKamera 1: Oliver Amann\nQuelle: 
- https://tsb-horkheim-hunters.de/calendar
+DESCRIPTION:TSB Hunters – VfL Pfullingen\n3. Liga Männer - Süd\nHalle: 
+ Stauwehrhalle\nEndstand: TSB Hunters 34:44 VfL Pfullingen\n\nLivestream-Te
+ am\nRegie: Markus Krieger\nKamera 1: Oliver Amann\nQuelle: https://tsb-hor
+ kheim-hunters.de/calendar
 URL:https://tsb-horkheim-hunters.de/calendar
 CATEGORIES:TSB Hunters
 STATUS:CONFIRMED
@@ -102,12 +108,13 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89707@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20260916T170000Z
 DTEND:20260916T190000Z
-SUMMARY:VfL Oldenburg – SU Neckarsulm 29:23 (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 4\nEndstand: 29:23\nQuelle: http
- s://www.alsco-hbf.de/
+SUMMARY:SUN gegen VfL Oldenburg 23:29 (auswärts)
+DESCRIPTION:VfL Oldenburg – SU Neckarsulm\n1. Bundesliga Frauen\nSpieltag
+  4\nEndstand: VfL Oldenburg 29:23 SU Neckarsulm\nQuelle: https://www.alsco
+ -hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -115,14 +122,14 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tsb-2627DHB3LERMD0501@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20260919T180000Z
 DTEND:20260919T200000Z
-SUMMARY:TSB Hunters – HBW Balingen-Weilstetten II (3. Liga Süd)
+SUMMARY:TSB gegen HBW Balingen-Weilstetten II
 LOCATION:Stauwehrhalle
-DESCRIPTION:3. Liga Männer - Süd\nHalle: Stauwehrhalle\n\nLivestream-Team
- \nRegie: emefka\nKamera 1: Oliver Amann\nQuelle: https://tsb-horkheim-hunt
- ers.de/calendar
+DESCRIPTION:TSB Hunters – HBW Balingen-Weilstetten II\n3. Liga Männer - 
+ Süd\nHalle: Stauwehrhalle\n\nLivestream-Team\nRegie: emefka\nKamera 1: Ol
+ iver Amann\nQuelle: https://tsb-horkheim-hunters.de/calendar
 URL:https://tsb-horkheim-hunters.de/calendar
 CATEGORIES:TSB Hunters
 STATUS:CONFIRMED
@@ -130,11 +137,12 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-pokal-90098@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20261003T140000Z
 DTEND:20261003T160000Z
-SUMMARY:Buxtehuder SV – SU Neckarsulm (DHB-Pokal)
-DESCRIPTION:DHB-Pokal Frauen\nSpieltag 2\nQuelle: https://www.alsco-hbf.de/
+SUMMARY:SUN gegen Buxtehuder SV (DHB-Pokal\, auswärts)
+DESCRIPTION:Buxtehuder SV – SU Neckarsulm\nDHB-Pokal Frauen\nSpieltag 2\n
+ Quelle: https://www.alsco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -142,14 +150,14 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tsb-2627DHB3LERMD0705@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20261003T180000Z
 DTEND:20261003T200000Z
-SUMMARY:TSB Hunters – TSV Neuhausen/Filder (3. Liga Süd)
+SUMMARY:TSB gegen TSV Neuhausen/Filder
 LOCATION:Stauwehrhalle
-DESCRIPTION:3. Liga Männer - Süd\nHalle: Stauwehrhalle\n\nLivestream-Team
- \nRegie: emefka\nKamera 1: Oliver Amann\nQuelle: https://tsb-horkheim-hunt
- ers.de/calendar
+DESCRIPTION:TSB Hunters – TSV Neuhausen/Filder\n3. Liga Männer - Süd\nH
+ alle: Stauwehrhalle\n\nLivestream-Team\nRegie: emefka\nKamera 1: Oliver Am
+ ann\nQuelle: https://tsb-horkheim-hunters.de/calendar
 URL:https://tsb-horkheim-hunters.de/calendar
 CATEGORIES:TSB Hunters
 STATUS:CONFIRMED
@@ -157,13 +165,14 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89712@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20261007T173000Z
 DTEND:20261007T193000Z
-SUMMARY:SU Neckarsulm – Frisch AUF Göppingen (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 5\n\nLivestream-Team\nRegie: eme
- fka\nKamera 1: Tanja Krieger\nKamera 2: Markus Krieger\nAnwesenheit: 17:30
-  Uhr\nQuelle: https://www.alsco-hbf.de/
+SUMMARY:SUN gegen Frisch Auf Göppingen
+DESCRIPTION:SU Neckarsulm – Frisch Auf Göppingen\n1. Bundesliga Frauen\n
+ Spieltag 5\n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\nKam
+ era 2: Markus Krieger\nAnwesenheit: 17:30 Uhr\nQuelle: https://www.alsco-h
+ bf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -171,12 +180,12 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89718@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20261017T173000Z
 DTEND:20261017T193000Z
-SUMMARY:TuS Metzingen – SU Neckarsulm (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 6\nQuelle: https://www.alsco-hbf
- .de/
+SUMMARY:SUN gegen TuS Metzingen (auswärts)
+DESCRIPTION:TuS Metzingen – SU Neckarsulm\n1. Bundesliga Frauen\nSpieltag
+  6\nQuelle: https://www.alsco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -184,14 +193,14 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tsb-2627DHB3LERMD1004@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20261024T180000Z
 DTEND:20261024T200000Z
-SUMMARY:TSB Hunters – TV Bittenfeld II (3. Liga Süd)
+SUMMARY:TSB gegen TV Bittenfeld II
 LOCATION:Stauwehrhalle
-DESCRIPTION:3. Liga Männer - Süd\nHalle: Stauwehrhalle\n\nLivestream-Team
- \nRegie: emefka\nKamera 1: Oliver Amann\nQuelle: https://tsb-horkheim-hunt
- ers.de/calendar
+DESCRIPTION:TSB Hunters – TV Bittenfeld II\n3. Liga Männer - Süd\nHalle
+ : Stauwehrhalle\n\nLivestream-Team\nRegie: emefka\nKamera 1: Oliver Amann\
+ nQuelle: https://tsb-horkheim-hunters.de/calendar
 URL:https://tsb-horkheim-hunters.de/calendar
 CATEGORIES:TSB Hunters
 STATUS:CONFIRMED
@@ -199,13 +208,14 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89725@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20261031T140000Z
 DTEND:20261031T160000Z
-SUMMARY:SU Neckarsulm – HSG Blomberg-Lippe (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 7\n\nLivestream-Team\nRegie: eme
- fka\nKamera 1: Tanja Krieger\nKamera 2: Markus Krieger\nAnwesenheit: 13:00
-  Uhr\nQuelle: https://www.alsco-hbf.de/
+SUMMARY:SUN gegen HSG Blomberg-Lippe
+DESCRIPTION:SU Neckarsulm – HSG Blomberg-Lippe\n1. Bundesliga Frauen\nSpi
+ eltag 7\n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\nKamera
+  2: Markus Krieger\nAnwesenheit: 13:00 Uhr\nQuelle: https://www.alsco-hbf.
+ de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -213,12 +223,12 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89729@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20261111T170000Z
 DTEND:20261111T190000Z
-SUMMARY:BSV Sachsen Zwickau – SU Neckarsulm (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 8\nQuelle: https://www.alsco-hbf
- .de/
+SUMMARY:SUN gegen BSV Sachsen Zwickau (auswärts)
+DESCRIPTION:BSV Sachsen Zwickau – SU Neckarsulm\n1. Bundesliga Frauen\nSp
+ ieltag 8\nQuelle: https://www.alsco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -226,14 +236,14 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tsb-2627DHB3LERMD1206@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20261114T190000Z
 DTEND:20261114T210000Z
-SUMMARY:TSB Hunters – HSG Albstadt (3. Liga Süd)
+SUMMARY:TSB gegen HSG Albstadt
 LOCATION:Stauwehrhalle
-DESCRIPTION:3. Liga Männer - Süd\nHalle: Stauwehrhalle\n\nLivestream-Team
- \nRegie: emefka\nKamera 1: Oliver Amann\nQuelle: https://tsb-horkheim-hunt
- ers.de/calendar
+DESCRIPTION:TSB Hunters – HSG Albstadt\n3. Liga Männer - Süd\nHalle: St
+ auwehrhalle\n\nLivestream-Team\nRegie: emefka\nKamera 1: Oliver Amann\nQue
+ lle: https://tsb-horkheim-hunters.de/calendar
 URL:https://tsb-horkheim-hunters.de/calendar
 CATEGORIES:TSB Hunters
 STATUS:CONFIRMED
@@ -241,13 +251,13 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89738@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20261121T170000Z
 DTEND:20261121T190000Z
-SUMMARY:SU Neckarsulm – Thüringer HC (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 9\n\nLivestream-Team\nRegie: eme
- fka\nKamera 1: Tanja Krieger\nKamera 2: Markus Krieger\nAnwesenheit: 16:00
-  Uhr\nQuelle: https://www.alsco-hbf.de/
+SUMMARY:SUN gegen Thüringer HC
+DESCRIPTION:SU Neckarsulm – Thüringer HC\n1. Bundesliga Frauen\nSpieltag
+  9\n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\nKamera 2: M
+ arkus Krieger\nAnwesenheit: 16:00 Uhr\nQuelle: https://www.alsco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -255,14 +265,14 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tsb-2627DHB3LERMD1504@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20261205T190000Z
 DTEND:20261205T210000Z
-SUMMARY:TSB Hunters – Wölfe Würzburg (3. Liga Süd)
+SUMMARY:TSB gegen Wölfe Würzburg
 LOCATION:Stauwehrhalle
-DESCRIPTION:3. Liga Männer - Süd\nHalle: Stauwehrhalle\n\nLivestream-Team
- \nRegie: emefka\nKamera 1: Oliver Amann\nQuelle: https://tsb-horkheim-hunt
- ers.de/calendar
+DESCRIPTION:TSB Hunters – Wölfe Würzburg\n3. Liga Männer - Süd\nHalle
+ : Stauwehrhalle\n\nLivestream-Team\nRegie: emefka\nKamera 1: Oliver Amann\
+ nQuelle: https://tsb-horkheim-hunters.de/calendar
 URL:https://tsb-horkheim-hunters.de/calendar
 CATEGORIES:TSB Hunters
 STATUS:CONFIRMED
@@ -270,14 +280,14 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tsb-2627DHB3LERMD1603@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20261212T190000Z
 DTEND:20261212T210000Z
-SUMMARY:TSB Hunters – TV 1861 Erlangen-Bruck (3. Liga Süd)
+SUMMARY:TSB gegen TV 1861 Erlangen-Bruck
 LOCATION:Stauwehrhalle
-DESCRIPTION:3. Liga Männer - Süd\nHalle: Stauwehrhalle\n\nLivestream-Team
- \nRegie: emefka\nKamera 1: Oliver Amann\nQuelle: https://tsb-horkheim-hunt
- ers.de/calendar
+DESCRIPTION:TSB Hunters – TV 1861 Erlangen-Bruck\n3. Liga Männer - Süd\
+ nHalle: Stauwehrhalle\n\nLivestream-Team\nRegie: emefka\nKamera 1: Oliver 
+ Amann\nQuelle: https://tsb-horkheim-hunters.de/calendar
 URL:https://tsb-horkheim-hunters.de/calendar
 CATEGORIES:TSB Hunters
 STATUS:CONFIRMED
@@ -285,12 +295,12 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89740@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20261230T180000Z
 DTEND:20261230T200000Z
-SUMMARY:HC Leipzig – SU Neckarsulm (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 10\nQuelle: https://www.alsco-hb
- f.de/
+SUMMARY:SUN gegen HC Leipzig (auswärts)
+DESCRIPTION:HC Leipzig – SU Neckarsulm\n1. Bundesliga Frauen\nSpieltag 10
+ \nQuelle: https://www.alsco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -298,13 +308,14 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89751@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20270102T170000Z
 DTEND:20270102T190000Z
-SUMMARY:SU Neckarsulm – SV Union Halle-Neustadt (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 11\n\nLivestream-Team\nRegie: em
- efka\nKamera 1: Tanja Krieger\nKamera 2: Markus Krieger\nAnwesenheit: 16:0
- 0 Uhr\nQuelle: https://www.alsco-hbf.de/
+SUMMARY:SUN gegen SV Union Halle-Neustadt
+DESCRIPTION:SU Neckarsulm – SV Union Halle-Neustadt\n1. Bundesliga Frauen
+ \nSpieltag 11\n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\n
+ Kamera 2: Markus Krieger\nAnwesenheit: 16:00 Uhr\nQuelle: https://www.alsc
+ o-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -312,12 +323,12 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89752@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20270109T170000Z
 DTEND:20270109T190000Z
-SUMMARY:HSG Bensheim/Auerbach – SU Neckarsulm (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 12\nQuelle: https://www.alsco-hb
- f.de/
+SUMMARY:SUN gegen HSG Bensheim/Auerbach (auswärts)
+DESCRIPTION:HSG Bensheim/Auerbach – SU Neckarsulm\n1. Bundesliga Frauen\n
+ Spieltag 12\nQuelle: https://www.alsco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -325,14 +336,14 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tsb-2627DHB3LERMD0902@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20270109T190000Z
 DTEND:20270109T210000Z
-SUMMARY:TSB Hunters – HSG Konstanz (3. Liga Süd)
+SUMMARY:TSB gegen HSG Konstanz
 LOCATION:Stauwehrhalle
-DESCRIPTION:3. Liga Männer - Süd\nHalle: Stauwehrhalle\n\nLivestream-Team
- \nRegie: emefka\nKamera 1: Oliver Amann\nQuelle: https://tsb-horkheim-hunt
- ers.de/calendar
+DESCRIPTION:TSB Hunters – HSG Konstanz\n3. Liga Männer - Süd\nHalle: St
+ auwehrhalle\n\nLivestream-Team\nRegie: emefka\nKamera 1: Oliver Amann\nQue
+ lle: https://tsb-horkheim-hunters.de/calendar
 URL:https://tsb-horkheim-hunters.de/calendar
 CATEGORIES:TSB Hunters
 STATUS:CONFIRMED
@@ -340,12 +351,13 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89762@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20270120T183000Z
 DTEND:20270120T203000Z
-SUMMARY:SU Neckarsulm – Borussia Dortmund (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 13\n\nLivestream-Team\nKamera 2:
-  Markus Krieger\nAnwesenheit: 17:30 Uhr\nQuelle: https://www.alsco-hbf.de/
+SUMMARY:SUN gegen Borussia Dortmund
+DESCRIPTION:SU Neckarsulm – Borussia Dortmund\n1. Bundesliga Frauen\nSpie
+ ltag 13\n\nLivestream-Team\nKamera 2: Markus Krieger\nAnwesenheit: 17:30 U
+ hr\nQuelle: https://www.alsco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -353,12 +365,12 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89765@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20270130T150000Z
 DTEND:20270130T170000Z
-SUMMARY:Buxtehuder SV – SU Neckarsulm (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 14\nQuelle: https://www.alsco-hb
- f.de/
+SUMMARY:SUN gegen Buxtehuder SV (auswärts)
+DESCRIPTION:Buxtehuder SV – SU Neckarsulm\n1. Bundesliga Frauen\nSpieltag
+  14\nQuelle: https://www.alsco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -366,13 +378,13 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89773@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20270206T170000Z
 DTEND:20270206T190000Z
-SUMMARY:SU Neckarsulm – VfL Oldenburg (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 15\n\nLivestream-Team\nRegie: em
- efka\nKamera 1: Tanja Krieger\nKamera 2: Oliver Amann\nAnwesenheit: 16:00 
- Uhr\nQuelle: https://www.alsco-hbf.de/
+SUMMARY:SUN gegen VfL Oldenburg
+DESCRIPTION:SU Neckarsulm – VfL Oldenburg\n1. Bundesliga Frauen\nSpieltag
+  15\n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\nKamera 2: 
+ Oliver Amann\nAnwesenheit: 16:00 Uhr\nQuelle: https://www.alsco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -380,12 +392,12 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89778@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20270213T180000Z
 DTEND:20270213T200000Z
-SUMMARY:Frisch AUF Göppingen – SU Neckarsulm (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 16\nQuelle: https://www.alsco-hb
- f.de/
+SUMMARY:SUN gegen Frisch Auf Göppingen (auswärts)
+DESCRIPTION:Frisch Auf Göppingen – SU Neckarsulm\n1. Bundesliga Frauen\n
+ Spieltag 16\nQuelle: https://www.alsco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -393,14 +405,14 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tsb-2627DHB3LERMD2101@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20270213T190000Z
 DTEND:20270213T210000Z
-SUMMARY:TSB Hunters – Rhein-Neckar Löwen II (3. Liga Süd)
+SUMMARY:TSB gegen Rhein-Neckar Löwen II
 LOCATION:Stauwehrhalle
-DESCRIPTION:3. Liga Männer - Süd\nHalle: Stauwehrhalle\n\nLivestream-Team
- \nRegie: emefka\nKamera 1: Oliver Amann\nQuelle: https://tsb-horkheim-hunt
- ers.de/calendar
+DESCRIPTION:TSB Hunters – Rhein-Neckar Löwen II\n3. Liga Männer - Süd\
+ nHalle: Stauwehrhalle\n\nLivestream-Team\nRegie: emefka\nKamera 1: Oliver 
+ Amann\nQuelle: https://tsb-horkheim-hunters.de/calendar
 URL:https://tsb-horkheim-hunters.de/calendar
 CATEGORIES:TSB Hunters
 STATUS:CONFIRMED
@@ -408,13 +420,13 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89784@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20270220T170000Z
 DTEND:20270220T190000Z
-SUMMARY:SU Neckarsulm – TuS Metzingen (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 17\n\nLivestream-Team\nRegie: em
- efka\nKamera 1: Tanja Krieger\nKamera 2: Oliver Amann\nAnwesenheit: 16:00 
- Uhr\nQuelle: https://www.alsco-hbf.de/
+SUMMARY:SUN gegen TuS Metzingen
+DESCRIPTION:SU Neckarsulm – TuS Metzingen\n1. Bundesliga Frauen\nSpieltag
+  17\n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\nKamera 2: 
+ Oliver Amann\nAnwesenheit: 16:00 Uhr\nQuelle: https://www.alsco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -422,12 +434,12 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89791@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20270227T160000Z
 DTEND:20270227T180000Z
-SUMMARY:HSG Blomberg-Lippe – SU Neckarsulm (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 18\nQuelle: https://www.alsco-hb
- f.de/
+SUMMARY:SUN gegen HSG Blomberg-Lippe (auswärts)
+DESCRIPTION:HSG Blomberg-Lippe – SU Neckarsulm\n1. Bundesliga Frauen\nSpi
+ eltag 18\nQuelle: https://www.alsco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -435,14 +447,14 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tsb-2627DHB3LERMD2307@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20270227T190000Z
 DTEND:20270227T210000Z
-SUMMARY:TSB Hunters – SG Regensburg (3. Liga Süd)
+SUMMARY:TSB gegen SG Regensburg
 LOCATION:Stauwehrhalle
-DESCRIPTION:3. Liga Männer - Süd\nHalle: Stauwehrhalle\n\nLivestream-Team
- \nRegie: emefka\nKamera 1: Oliver Amann\nQuelle: https://tsb-horkheim-hunt
- ers.de/calendar
+DESCRIPTION:TSB Hunters – SG Regensburg\n3. Liga Männer - Süd\nHalle: S
+ tauwehrhalle\n\nLivestream-Team\nRegie: emefka\nKamera 1: Oliver Amann\nQu
+ elle: https://tsb-horkheim-hunters.de/calendar
 URL:https://tsb-horkheim-hunters.de/calendar
 CATEGORIES:TSB Hunters
 STATUS:CONFIRMED
@@ -450,53 +462,12 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89795@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20270313T170000Z
 DTEND:20270313T190000Z
-SUMMARY:SU Neckarsulm – BSV Sachsen Zwickau (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 19\n\nLivestream-Team\nKamera 1:
-  Tanja Krieger\nAnwesenheit: 16:00 Uhr\nQuelle: https://www.alsco-hbf.de/
-URL:https://www.alsco-hbf.de/
-CATEGORIES:SU Neckarsulm
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-UID:tsb-2627DHB3LERMD1803@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
-DTSTART:20270313T190000Z
-DTEND:20270313T210000Z
-SUMMARY:TSB Hunters – SG Pforzheim/Eutingen (3. Liga Süd)
-LOCATION:Stauwehrhalle
-DESCRIPTION:3. Liga Männer - Süd\nHalle: Stauwehrhalle\n\nLivestream-Team
- \nRegie: emefka\nKamera 1: Oliver Amann\nQuelle: https://tsb-horkheim-hunt
- ers.de/calendar
-URL:https://tsb-horkheim-hunters.de/calendar
-CATEGORIES:TSB Hunters
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-UID:hbf-bundesliga-89804@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
-DTSTART:20270320T170000Z
-DTEND:20270320T190000Z
-SUMMARY:Thüringer HC – SU Neckarsulm (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 20\nQuelle: https://www.alsco-hb
- f.de/
-URL:https://www.alsco-hbf.de/
-CATEGORIES:SU Neckarsulm
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-UID:hbf-bundesliga-89806@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
-DTSTART:20270327T170000Z
-DTEND:20270327T190000Z
-SUMMARY:SU Neckarsulm – HC Leipzig (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 21\n\nLivestream-Team\nRegie: em
- efka\nKamera 1: Tanja Krieger\nKamera 2: Oliver Amann\nAnwesenheit: 16:00 
+SUMMARY:SUN gegen BSV Sachsen Zwickau
+DESCRIPTION:SU Neckarsulm – BSV Sachsen Zwickau\n1. Bundesliga Frauen\nSp
+ ieltag 19\n\nLivestream-Team\nKamera 1: Tanja Krieger\nAnwesenheit: 16:00 
  Uhr\nQuelle: https://www.alsco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
@@ -504,15 +475,57 @@ STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
+UID:tsb-2627DHB3LERMD1803@handballlivestream.emefkaner.github.io
+DTSTAMP:20260919T185336Z
+DTSTART:20270313T190000Z
+DTEND:20270313T210000Z
+SUMMARY:TSB gegen SG Pforzheim/Eutingen
+LOCATION:Stauwehrhalle
+DESCRIPTION:TSB Hunters – SG Pforzheim/Eutingen\n3. Liga Männer - Süd\n
+ Halle: Stauwehrhalle\n\nLivestream-Team\nRegie: emefka\nKamera 1: Oliver A
+ mann\nQuelle: https://tsb-horkheim-hunters.de/calendar
+URL:https://tsb-horkheim-hunters.de/calendar
+CATEGORIES:TSB Hunters
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89804@handballlivestream.emefkaner.github.io
+DTSTAMP:20260919T185336Z
+DTSTART:20270320T170000Z
+DTEND:20270320T190000Z
+SUMMARY:SUN gegen Thüringer HC (auswärts)
+DESCRIPTION:Thüringer HC – SU Neckarsulm\n1. Bundesliga Frauen\nSpieltag
+  20\nQuelle: https://www.alsco-hbf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89806@handballlivestream.emefkaner.github.io
+DTSTAMP:20260919T185336Z
+DTSTART:20270327T170000Z
+DTEND:20270327T190000Z
+SUMMARY:SUN gegen HC Leipzig
+DESCRIPTION:SU Neckarsulm – HC Leipzig\n1. Bundesliga Frauen\nSpieltag 21
+ \n\nLivestream-Team\nRegie: emefka\nKamera 1: Tanja Krieger\nKamera 2: Oli
+ ver Amann\nAnwesenheit: 16:00 Uhr\nQuelle: https://www.alsco-hbf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
 UID:tsb-2627DHB3LERMD2602@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20270403T180000Z
 DTEND:20270403T200000Z
-SUMMARY:TSB Hunters – HC Erlangen II (3. Liga Süd)
+SUMMARY:TSB gegen HC Erlangen II
 LOCATION:Stauwehrhalle
-DESCRIPTION:3. Liga Männer - Süd\nHalle: Stauwehrhalle\n\nLivestream-Team
- \nRegie: emefka\nKamera 1: Oliver Amann\nQuelle: https://tsb-horkheim-hunt
- ers.de/calendar
+DESCRIPTION:TSB Hunters – HC Erlangen II\n3. Liga Männer - Süd\nHalle: 
+ Stauwehrhalle\n\nLivestream-Team\nRegie: emefka\nKamera 1: Oliver Amann\nQ
+ uelle: https://tsb-horkheim-hunters.de/calendar
 URL:https://tsb-horkheim-hunters.de/calendar
 CATEGORIES:TSB Hunters
 STATUS:CONFIRMED
@@ -520,12 +533,12 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89817@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20270404T123000Z
 DTEND:20270404T143000Z
-SUMMARY:SV Union Halle-Neustadt – SU Neckarsulm (1. BL)
-DESCRIPTION:1. Bundesliga Frauen\nSpieltag 22\nQuelle: https://www.alsco-hb
- f.de/
+SUMMARY:SUN gegen SV Union Halle-Neustadt (auswärts)
+DESCRIPTION:SV Union Halle-Neustadt – SU Neckarsulm\n1. Bundesliga Frauen
+ \nSpieltag 22\nQuelle: https://www.alsco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
@@ -533,14 +546,14 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tsb-2627DHB3LERMD2806@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20270417T180000Z
 DTEND:20270417T200000Z
-SUMMARY:TSB Hunters – TSB Schwäbisch Gmünd (3. Liga Süd)
+SUMMARY:TSB gegen TSB Schwäbisch Gmünd
 LOCATION:Stauwehrhalle
-DESCRIPTION:3. Liga Männer - Süd\nHalle: Stauwehrhalle\n\nLivestream-Team
- \nRegie: emefka\nKamera 1: Oliver Amann\nQuelle: https://tsb-horkheim-hunt
- ers.de/calendar
+DESCRIPTION:TSB Hunters – TSB Schwäbisch Gmünd\n3. Liga Männer - Süd\
+ nHalle: Stauwehrhalle\n\nLivestream-Team\nRegie: emefka\nKamera 1: Oliver 
+ Amann\nQuelle: https://tsb-horkheim-hunters.de/calendar
 URL:https://tsb-horkheim-hunters.de/calendar
 CATEGORIES:TSB Hunters
 STATUS:CONFIRMED
@@ -548,14 +561,14 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:tsb-2627DHB3LERMD2906@handballlivestream.emefkaner.github.io
-DTSTAMP:20260919T184052Z
+DTSTAMP:20260919T185336Z
 DTSTART:20270424T180000Z
 DTEND:20270424T200000Z
-SUMMARY:TSB Hunters – SV Salamander Kornwestheim (3. Liga Süd)
+SUMMARY:TSB gegen SV Salamander Kornwestheim
 LOCATION:Stauwehrhalle
-DESCRIPTION:3. Liga Männer - Süd\nHalle: Stauwehrhalle\n\nLivestream-Team
- \nRegie: emefka\nKamera 1: Oliver Amann\nQuelle: https://tsb-horkheim-hunt
- ers.de/calendar
+DESCRIPTION:TSB Hunters – SV Salamander Kornwestheim\n3. Liga Männer - S
+ üd\nHalle: Stauwehrhalle\n\nLivestream-Team\nRegie: emefka\nKamera 1: Oli
+ ver Amann\nQuelle: https://tsb-horkheim-hunters.de/calendar
 URL:https://tsb-horkheim-hunters.de/calendar
 CATEGORIES:TSB Hunters
 STATUS:CONFIRMED

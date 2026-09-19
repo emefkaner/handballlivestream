@@ -92,24 +92,38 @@ function baueTermin(spiel, gebautAm, kennzeichen, mitBesetzung) {
   return zeilen;
 }
 
-function titel(spiel) {
-  const kern = `${spiel.heim} – ${spiel.gast}`;
-  const zusatz = spiel.liga ? ` (${spiel.liga})` : '';
+// "TSB gegen HSG Albstadt", "SUN gegen Borussia Dortmund (auswärts)".
+// Die eigene Mannschaft steht immer vorn, damit auf dem Sperrbildschirm
+// sofort klar ist, um wen es geht. Die Liga gehört nicht in den Titel —
+// TSB spielt immer 3. Liga, SUN immer 1. Bundesliga; nur der Pokal fällt
+// aus der Reihe und wird deshalb genannt.
+export function titel(spiel) {
+  const kern = `${spiel.eigene} gegen ${spiel.gegner}`;
+
+  const zusaetze = [];
+  if (spiel.pokal) zusaetze.push('DHB-Pokal');
+  if (spiel.daheim === false) zusaetze.push('auswärts');
+  const zusatz = zusaetze.length > 0 ? ` (${zusaetze.join(', ')})` : '';
+
   if (spiel.abgesagt) return `ABGESAGT: ${kern}${zusatz}`;
-  if (spiel.gespielt && Number.isFinite(spiel.toreHeim) && Number.isFinite(spiel.toreGast)) {
-    return `${kern} ${spiel.toreHeim}:${spiel.toreGast}${zusatz}`;
+  if (spiel.gespielt && Number.isFinite(spiel.toreEigene) && Number.isFinite(spiel.toreGegner)) {
+    return `${kern} ${spiel.toreEigene}:${spiel.toreGegner}${zusatz}`;
   }
   return `${kern}${zusatz}`;
 }
 
 function beschreibungText(spiel, mitBesetzung) {
   const zeilen = [];
+  // Hier steht die Paarung in der üblichen Lesart, damit man auch sieht,
+  // wer Gastgeber ist.
+  zeilen.push(`${spiel.heim} – ${spiel.gast}`);
   if (spiel.ligaLang) zeilen.push(spiel.ligaLang);
   if (spiel.spieltag) zeilen.push(`Spieltag ${spiel.spieltag}`);
   if (spiel.ort) zeilen.push(`Halle: ${spiel.ort}`);
   if (spiel.abgesagt) zeilen.push('Dieses Spiel wurde abgesagt.');
   else if (spiel.gespielt && Number.isFinite(spiel.toreHeim) && Number.isFinite(spiel.toreGast)) {
-    zeilen.push(`Endstand: ${spiel.toreHeim}:${spiel.toreGast}`);
+    // In der Beschreibung bleibt die übliche Lesart Heim:Gast.
+    zeilen.push(`Endstand: ${spiel.heim} ${spiel.toreHeim}:${spiel.toreGast} ${spiel.gast}`);
   }
   if (mitBesetzung && spiel.besetzung) {
     zeilen.push('', 'Livestream-Team');

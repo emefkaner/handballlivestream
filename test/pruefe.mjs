@@ -2,7 +2,7 @@
 // Kalenderdatei, falls schon eine gebaut wurde.
 
 import { readFileSync, existsSync } from 'node:fs';
-import { baueKalender, SPIELDAUER_MINUTEN } from '../src/ics.mjs';
+import { baueKalender, titel, SPIELDAUER_MINUTEN } from '../src/ics.mjs';
 import { leseCsv, leseDatum, ortsDatum } from '../src/dienstplan.mjs';
 import { mannschaftsName, ligaKurz } from '../src/namen.mjs';
 import { saisonBezeichnung } from '../src/quellen.mjs';
@@ -53,6 +53,10 @@ const beispiel = [{
   beginn: new Date('2026-10-03T18:00:00Z'),
   heim: 'TSB Hunters',
   gast: 'TSV Neuhausen/Filder',
+  eigene: 'TSB',
+  gegner: 'TSV Neuhausen/Filder',
+  daheim: true,
+  pokal: false,
   liga: '3. Liga Süd',
   ligaLang: '3. Liga Männer - Süd',
   ort: 'Stauwehrhalle',
@@ -70,6 +74,23 @@ pruefe('enthält den Anpfiff als UTC', ics.includes('DTSTART:20261003T180000Z'))
 gleich('Spieldauer ist gesetzt', SPIELDAUER_MINUTEN, 120);
 pruefe('setzt das Ende zwei Stunden später', ics.includes('DTEND:20261003T200000Z'));
 pruefe('keine Namen ohne ausdrücklichen Wunsch', !ics.includes('Regie:'));
+
+console.log('Titel');
+gleich('eigene Mannschaft zuerst, dann der Gegner',
+  titel({ eigene: 'TSB', gegner: 'HSG Albstadt', daheim: true }),
+  'TSB gegen HSG Albstadt');
+gleich('auswärts wird gekennzeichnet',
+  titel({ eigene: 'SUN', gegner: 'Borussia Dortmund', daheim: false }),
+  'SUN gegen Borussia Dortmund (auswärts)');
+gleich('Pokal auswärts nennt beides',
+  titel({ eigene: 'SUN', gegner: 'Buxtehuder SV', daheim: false, pokal: true }),
+  'SUN gegen Buxtehuder SV (DHB-Pokal, auswärts)');
+gleich('Ergebnis aus eigener Sicht, auch auswärts',
+  titel({ eigene: 'SUN', gegner: 'Borussia Dortmund', daheim: false, gespielt: true, toreEigene: 33, toreGegner: 35 }),
+  'SUN gegen Borussia Dortmund 33:35 (auswärts)');
+gleich('abgesagte Spiele sind als solche erkennbar',
+  titel({ eigene: 'TSB', gegner: 'HSG Konstanz', daheim: true, abgesagt: true }),
+  'ABGESAGT: TSB gegen HSG Konstanz');
 
 // Gefaltete Zeilen: keine Zeile über 75 Oktette.
 for (const zeile of ics.split('\r\n')) {

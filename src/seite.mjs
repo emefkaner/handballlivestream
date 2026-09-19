@@ -1,6 +1,8 @@
 // Kleine Übersichtsseite neben der .ics-Datei: Abo-Adresse zum Kopieren,
 // Knopf fürs Handy und die nächsten Termine zum Gegenprüfen.
 
+import { titel } from './ics.mjs';
+
 const ZEITZONE = 'Europe/Berlin';
 
 // Adressen, die ohne GitHub Pages auskommen.
@@ -53,8 +55,8 @@ export function baueSeite({ spiele, gebautAm, saison, dateiname, mitBesetzung = 
   const zeilen = kommende.map((s) => `
       <tr>
         <td class="wann">${schuetze(kurzDatum(s.beginn))}</td>
-        <td class="wer"><span class="marke ${s.kategorie === 'TSB Hunters' ? 'tsb' : 'nsu'}">${schuetze(s.kategorie)}</span></td>
-        <td>${schuetze(s.heim)} – ${schuetze(s.gast)}${einteilungsZeile(s.besetzung)}</td>
+        <td class="wer"><span class="marke ${s.kategorie === 'TSB Hunters' ? 'tsb' : 'nsu'}">${schuetze(s.eigene)}</span></td>
+        <td>${schuetze(titel(s))}${einteilungsZeile(s.besetzung)}</td>
         <td class="ort">${schuetze(s.ort || '')}</td>
       </tr>`).join('');
 
@@ -89,12 +91,12 @@ export function baueSeite({ spiele, gebautAm, saison, dateiname, mitBesetzung = 
   td { border-bottom: 1px solid var(--rand); padding: .5rem .4rem; vertical-align: top;
        overflow-wrap: anywhere; }
   td.wann { white-space: nowrap; color: var(--gedaempft); width: 8.4rem; }
-  td.wer { width: 7.6rem; padding-right: .7rem; }
+  td.wer { width: 3.8rem; padding-right: .7rem; }
   td.ort { color: var(--gedaempft); width: 8rem; }
   @media (max-width: 34rem) {
     td.ort { display: none; }
     td.wann { width: 7rem; font-size: .85rem; }
-    td.wer { width: 6.6rem; }
+    td.wer { width: 3.4rem; }
   }
   .marke { display: inline-block; padding: .05rem .45rem; border-radius: .3rem; font-size: .78rem;
            font-weight: 600; white-space: nowrap; }

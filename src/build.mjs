@@ -24,12 +24,25 @@ const BESCHREIBUNG_SPIELPLAN =
   '(Damen, 1. Bundesliga und DHB-Pokal). Bei den Heimspielen steht die Einteilung des ' +
   'Livestream-Teams im Termin. Wird zweimal täglich automatisch aktualisiert.';
 
+// Im Kalender steht immer die eigene Mannschaft zuerst, dann der Gegner —
+// auch auswärts. Dafür muss der Bau wissen, welche der beiden die eigene ist,
+// und das Ergebnis entsprechend herumdrehen.
 function aufbereiten(spiel) {
+  const daheim = spiel.quelle === 'tsb' ? true : /neckarsulm/i.test(spiel.heim);
+  const heim = mannschaftsName(spiel.heim);
+  const gast = mannschaftsName(spiel.gast);
+
   return {
     ...spiel,
-    heim: mannschaftsName(spiel.heim),
-    gast: mannschaftsName(spiel.gast),
+    heim,
+    gast,
     liga: ligaKurz(spiel.liga),
+    eigene: spiel.quelle === 'tsb' ? 'TSB' : 'SUN',
+    gegner: daheim ? gast : heim,
+    daheim,
+    pokal: spiel.quelle === 'hbf-pokal',
+    toreEigene: daheim ? spiel.toreHeim : spiel.toreGast,
+    toreGegner: daheim ? spiel.toreGast : spiel.toreHeim,
   };
 }
 

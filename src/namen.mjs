@@ -13,6 +13,9 @@ const ERSETZUNGEN = new Map([
   ['TSB Heilbronn-Horkheim', 'TSB Hunters'],
   ['Sport-Union Neckarsulm', 'SU Neckarsulm'],
   ['Neckarsulmer Sport-Union', 'SU Neckarsulm'],
+  // Die Quelle schreibt "FRISCH AUF Göppingen"; das kurze "AUF" rutscht
+  // sonst als vermeintliches Kürzel durch die Versalien-Regel.
+  ['Frisch AUF Göppingen', 'Frisch Auf Göppingen'],
   ['VFL', 'VfL'],
   ['VFB', 'VfB'],
   ['TUS', 'TuS'],
