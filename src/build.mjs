@@ -20,9 +20,10 @@ const SPIELPLAN_DATEI = 'handball.ics';
 
 const NAME_SPIELPLAN = 'Handball-Livestreams-Unterland (emefka)';
 const BESCHREIBUNG_SPIELPLAN =
-  'Alle Heimspiele der TSB Hunters (3. Liga Süd) und alle Spiele der Sport-Union Neckarsulm ' +
-  '(Damen, 1. Bundesliga und DHB-Pokal). Bei den Heimspielen steht die Einteilung des ' +
-  'Livestream-Teams im Termin. Wird zweimal täglich automatisch aktualisiert.';
+  'Alle Heimspiele der TSB Hunters (3. Liga Süd) und der Sport-Union Neckarsulm ' +
+  '(Damen, 1. Bundesliga und DHB-Pokal) — also die Spiele, bei denen gestreamt wird. ' +
+  'Im Termin steht, wer für Regie und Kamera eingeteilt ist. ' +
+  'Wird zweimal täglich automatisch aktualisiert.';
 
 // Im Kalender steht immer die eigene Mannschaft zuerst, dann der Gegner —
 // auch auswärts. Dafür muss der Bau wissen, welche der beiden die eigene ist,
@@ -60,9 +61,25 @@ async function main() {
     throw new Error(`Für Neckarsulm wurde in der Saison ${saison} kein Spiel gefunden — Bau abgebrochen.`);
   }
 
+  // In den Kalender kommen ausschließlich Heimspiele — bei denen wird
+  // gestreamt. Bei der TSB liefert die Quelle ohnehin nur Heimspiele, bei
+  // Neckarsulm wird hier gefiltert, in Liga wie Pokal.
+  const nsuHeimspiele = nsuSpiele
+    .map((s) => ({ ...aufbereiten(s), kategorie: 'SU Neckarsulm' }))
+    .filter((s) => s.daheim);
+
+  protokoll.push(
+    `Neckarsulm: ${nsuHeimspiele.length} Heimspiele übernommen, ` +
+    `${nsuSpiele.length - nsuHeimspiele.length} Auswärtsspiele weggelassen`,
+  );
+
+  if (nsuHeimspiele.length === 0) {
+    throw new Error(`Für Neckarsulm wurde in der Saison ${saison} kein Heimspiel gefunden — Bau abgebrochen.`);
+  }
+
   const spiele = [
     ...huntersHeimspiele.map((s) => ({ ...aufbereiten(s), kategorie: 'TSB Hunters' })),
-    ...nsuSpiele.map((s) => ({ ...aufbereiten(s), kategorie: 'SU Neckarsulm' })),
+    ...nsuHeimspiele,
   ].sort((a, b) => a.beginn - b.beginn);
 
   // Die Einteilung ist eine Zutat, kein Fundament: fällt die Tabelle aus,
@@ -112,7 +129,7 @@ async function main() {
   for (const zeile of protokoll) console.log(zeile);
   const mitBesetzung = spiele.filter((s) => s.besetzung).length;
   console.log(`\nGeschrieben: docs/${SPIELPLAN_DATEI}`);
-  console.log(`Termine gesamt: ${spiele.length} (TSB-Heimspiele: ${huntersHeimspiele.length}, Neckarsulm: ${nsuSpiele.length})`);
+  console.log(`Termine gesamt: ${spiele.length} (TSB: ${huntersHeimspiele.length}, Neckarsulm: ${nsuHeimspiele.length}) — nur Heimspiele`);
   console.log(`Davon mit Livestream-Besetzung: ${mitBesetzung}`);
   const naechstes = spiele.find((s) => s.beginn > gebautAm);
   if (naechstes) {

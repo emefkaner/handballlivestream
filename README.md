@@ -3,7 +3,11 @@
 Erzeugt eine iCal-Datei mit
 
 - allen **Heimspielen der TSB Hunters** (TSB Heilbronn-Horkheim, 3. Liga Süd) und
-- **allen Spielen der Sport-Union Neckarsulm** (Damen, 1. Bundesliga und DHB-Pokal, Heim und auswärts).
+- allen **Heimspielen der Sport-Union Neckarsulm** (Damen, 1. Bundesliga und DHB-Pokal).
+
+Es stehen ausschließlich Heimspiele drin — die Spiele, bei denen gestreamt
+wird. Auswärtsspiele lässt der Bau weg, in Liga wie Pokal. Kommt Neckarsulm im
+Pokal weiter und bekommt ein Heimrecht, taucht das Spiel von allein auf.
 
 Ein GitHub-Actions-Lauf baut die Datei zweimal täglich neu und legt sie unter
 `docs/` im Repo ab. Kalender-Apps holen sich Änderungen von allein — kein
@@ -52,8 +56,11 @@ Saison und schreibt eine Warnung ins Protokoll.
 
 ## Was im Termin steht
 
-- **Titel**: `TSB Hunters – HSG Albstadt (3. Liga Süd)`. Ist das Spiel vorbei,
-  steht das Ergebnis dahinter; ist es abgesagt, beginnt der Titel mit `ABGESAGT:`.
+- **Titel**: `TSB gegen HSG Albstadt` bzw. `SUN gegen TuS Metzingen` — die
+  eigene Mannschaft immer zuerst. Ist das Spiel vorbei, steht das Ergebnis aus
+  eigener Sicht dahinter; ist es abgesagt, beginnt der Titel mit `ABGESAGT:`.
+  Pokalspiele werden als solche gekennzeichnet, die Liga nicht: Die TSB spielt
+  immer 3. Liga, Neckarsulm immer 1. Bundesliga.
 - **Dauer**: zwei Stunden ab Anpfiff. Die Quellen nennen kein Spielende;
   2 × 30 Minuten plus Pause und Ein-/Auslauf sind die ehrliche Schätzung
   (`SPIELDAUER_MINUTEN` in `src/ics.mjs`).
@@ -63,7 +70,7 @@ Saison und schreibt eine Warnung ins Protokoll.
 ## Selbst bauen
 
 ```bash
-npm run build     # schreibt site/
+npm run build     # schreibt docs/
 npm test          # prüft die Bausteine und die erzeugte Datei
 ```
 
