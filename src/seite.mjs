@@ -3,9 +3,15 @@
 
 const ZEITZONE = 'Europe/Berlin';
 
-// Zweite Adresse, die ohne GitHub Pages auskommt: die Datei im Repo selbst.
+// Adressen, die ohne GitHub Pages auskommen.
+// raw liefert die Datei als text/plain, ist dafür nach fünf Minuten aktuell.
+// jsDelivr kennzeichnet sie korrekt als text/calendar, hält eine Änderung
+// aber bis zu sieben Tage zurück (max-age=604800) — deshalb nur als Rückfall,
+// falls eine Kalender-App den text/plain-Typ ablehnt.
 const ROH_ADRESSE =
   'https://raw.githubusercontent.com/emefkaner/handballlivestream/main/docs/handball.ics';
+const CDN_ADRESSE =
+  'https://cdn.jsdelivr.net/gh/emefkaner/handballlivestream@main/docs/handball.ics';
 
 function deutschesDatum(datum) {
   return new Intl.DateTimeFormat('de-DE', {
@@ -112,8 +118,11 @@ export function baueSeite({ spiele, gebautAm, saison, dateiname, mitBesetzung = 
   <p>Diese Adresse kopieren:</p>
   <input class="adresse" readonly value="" id="adresse">
   <p><a class="knopf" id="knopf" href="#">Auf iPhone/iPad direkt abonnieren</a></p>
-  <p class="warnung">Zweite Adresse, die ohne GitHub Pages auskommt — sie zeigt direkt auf die
-  Datei im Repo:<br><code>${schuetze(ROH_ADRESSE)}</code></p>
+  <p class="warnung">Diese Adresse zeigt direkt auf die Datei im Repo und ist immer erreichbar:<br>
+  <code>${schuetze(ROH_ADRESSE)}</code><br><br>
+  Falls eine Kalender-App sie nicht annimmt, geht auch:<br>
+  <code>${schuetze(CDN_ADRESSE)}</code> — richtig gekennzeichnet, aber bis zu sieben Tage
+  hinter dem aktuellen Stand.</p>
 
   <h2>So geht es am iPhone</h2>
   <ol>

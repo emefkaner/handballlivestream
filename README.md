@@ -5,9 +5,35 @@ Erzeugt eine iCal-Datei mit
 - allen **Heimspielen der TSB Hunters** (TSB Heilbronn-Horkheim, 3. Liga Süd) und
 - **allen Spielen der Sport-Union Neckarsulm** (Damen, 1. Bundesliga und DHB-Pokal, Heim und auswärts).
 
-Ein GitHub-Actions-Lauf baut die Datei zweimal täglich neu und legt sie auf
-GitHub Pages ab. Kalender-Apps holen sich Änderungen dort von allein — kein
+Ein GitHub-Actions-Lauf baut die Datei zweimal täglich neu und legt sie unter
+`docs/` im Repo ab. Kalender-Apps holen sich Änderungen von allein — kein
 Server, keine laufenden Kosten.
+
+## Die Abo-Adresse
+
+```
+https://raw.githubusercontent.com/emefkaner/handballlivestream/main/docs/handball.ics
+```
+
+Weil der Lauf die fertige Datei selbst committet, braucht es **kein** GitHub
+Pages: Die Adresse funktioniert sofort und ist nach spätestens fünf Minuten auf
+dem neuesten Stand (`cache-control: max-age=300`).
+
+GitHub liefert sie allerdings als `text/plain` statt `text/calendar`. Nimmt
+eine Kalender-App sie deshalb nicht an, hilft dieselbe Datei über jsDelivr:
+
+```
+https://cdn.jsdelivr.net/gh/emefkaner/handballlivestream@main/docs/handball.ics
+```
+
+Die ist korrekt gekennzeichnet, hält eine Änderung aber bis zu sieben Tage
+zurück (`max-age=604800`) — für kurzfristige Absagen also der schlechtere Weg.
+
+Ist GitHub Pages eingerichtet (Source: GitHub Actions), veröffentlicht der Lauf
+zusätzlich unter `https://emefkaner.github.io/handballlivestream/` — mit
+richtigem Inhaltstyp *und* kurzer Cache-Zeit. Scheitert das, läuft der Rest
+trotzdem durch; der Pages-Schritt darf fehlschlagen, ohne den Kalender
+aufzuhalten.
 
 ## Woher die Daten kommen
 
