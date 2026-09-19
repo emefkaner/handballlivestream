@@ -1,0 +1,11 @@
+{
+  "name": "handball-kalender",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Baut einen abonnierbaren iCal-Kalender mit den Heimspielen der TSB Hunters und allen Spielen der Sport-Union Neckarsulm (Damen, 1. Bundesliga + DHB-Pokal).",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "test": "node test/pruefe.mjs"
+  }
+}

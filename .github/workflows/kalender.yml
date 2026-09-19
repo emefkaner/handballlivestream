@@ -1,0 +1,64 @@
+name: Kalender bauen und veröffentlichen
+
+on:
+  # Zweimal täglich: früh und am späten Nachmittag (UTC; im Sommer +2 h).
+  # Damit sind Verlegungen und Absagen spätestens am nächsten Morgen drin —
+  # einmal wöchentlich wäre zu selten, wenn kurzfristig etwas abgesagt wird.
+  # Achtung: GitHub schaltet Zeitpläne in Repos ab, in denen 60 Tage lang
+  # nichts passiert, und schickt vorher eine Mail. Dann unter "Actions" auf
+  # "Enable workflow" klicken.
+  schedule:
+    - cron: '25 4,15 * * *'
+  # Nach jeder Änderung am Generator.
+  push:
+    branches: [main]
+  # Und auf Knopfdruck unter "Actions".
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Ein Lauf zur Zeit; einen bereits laufenden nicht abbrechen.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  bauen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Kalender erzeugen
+        env:
+          # Optional: schwer zu erratender Dateiname für die Fassung mit der
+          # Team-Einteilung. Ohne dieses Secret heißt sie schlicht dienstplan.ics.
+          DIENSTPLAN_DATEI: ${{ secrets.DIENSTPLAN_DATEI }}
+          # Auf '1' setzen, um die Fassung mit Namen gar nicht erst zu bauen.
+          OHNE_DIENSTPLAN: ${{ vars.OHNE_DIENSTPLAN }}
+        run: npm run build
+
+      - name: Erzeugte Dateien prüfen
+        run: npm test
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  veroeffentlichen:
+    needs: bauen
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.pages.outputs.page_url }}
+    steps:
+      - id: pages
+        uses: actions/deploy-pages@v4
