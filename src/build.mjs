@@ -18,7 +18,7 @@ const AUSGABE = new URL('../docs/', import.meta.url).pathname;
 
 const SPIELPLAN_DATEI = 'handball.ics';
 
-const NAME_SPIELPLAN = 'Handball: TSB Hunters (Heim) & SU Neckarsulm';
+const NAME_SPIELPLAN = 'Handball-Livestreams-Unterland (emefka)';
 const BESCHREIBUNG_SPIELPLAN =
   'Alle Heimspiele der TSB Hunters (3. Liga Süd) und alle Spiele der Sport-Union Neckarsulm ' +
   '(Damen, 1. Bundesliga und DHB-Pokal). Bei den Heimspielen steht die Einteilung des ' +
