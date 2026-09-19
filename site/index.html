@@ -1,63 +1,9 @@
-// Kleine Übersichtsseite neben der .ics-Datei: Abo-Adresse zum Kopieren,
-// Knopf fürs Handy und die nächsten Termine zum Gegenprüfen.
-
-const ZEITZONE = 'Europe/Berlin';
-
-// Zweite Adresse, die ohne GitHub Pages auskommt: die Datei im Repo selbst.
-const ROH_ADRESSE =
-  'https://raw.githubusercontent.com/emefkaner/handballlivestream/main/docs/handball.ics';
-
-function deutschesDatum(datum) {
-  return new Intl.DateTimeFormat('de-DE', {
-    weekday: 'short', day: '2-digit', month: '2-digit', year: 'numeric',
-    hour: '2-digit', minute: '2-digit', timeZone: ZEITZONE,
-  }).format(datum);
-}
-
-// Kurzform für die Tabelle: "Sa 03.10. 20:00" — die Jahreszahl steht in der
-// Überschrift, und auf dem Handy zählt jede Spalte.
-function kurzDatum(datum) {
-  const teile = new Intl.DateTimeFormat('de-DE', {
-    weekday: 'short', day: '2-digit', month: '2-digit',
-    hour: '2-digit', minute: '2-digit', timeZone: ZEITZONE,
-  }).formatToParts(datum);
-  const hole = (art) => teile.find((t) => t.type === art)?.value ?? '';
-  return `${hole('weekday').replace('.', '')} ${hole('day')}.${hole('month')}. ${hole('hour')}:${hole('minute')}`;
-}
-
-function schuetze(text) {
-  return String(text ?? '')
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-}
-
-// Zeigt die Einteilung unter der Paarung — kurz, damit die Zeile auf dem
-// Handy nicht ausufert.
-function einteilungsZeile(besetzung) {
-  if (!besetzung) return '';
-  const teile = [];
-  if (besetzung.regie) teile.push(`Regie ${besetzung.regie}`);
-  if (besetzung.kamera1) teile.push(`Kamera ${besetzung.kamera1}`);
-  if (besetzung.kamera2) teile.push(besetzung.kamera2);
-  if (teile.length === 0) return '';
-  return `<div class="team">${schuetze(teile.join(' · '))}</div>`;
-}
-
-export function baueSeite({ spiele, gebautAm, saison, dateiname, mitBesetzung = false, name }) {
-  const kommende = spiele.filter((s) => s.beginn > gebautAm).slice(0, 12);
-  const zeilen = kommende.map((s) => `
-      <tr>
-        <td class="wann">${schuetze(kurzDatum(s.beginn))}</td>
-        <td class="wer"><span class="marke ${s.kategorie === 'TSB Hunters' ? 'tsb' : 'nsu'}">${schuetze(s.kategorie)}</span></td>
-        <td>${schuetze(s.heim)} – ${schuetze(s.gast)}${einteilungsZeile(s.besetzung)}</td>
-        <td class="ort">${schuetze(s.ort || '')}</td>
-      </tr>`).join('');
-
-  return `<!doctype html>
+<!doctype html>
 <html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${schuetze(name)}</title>
+<title>Handball: TSB Hunters (Heim) &amp; SU Neckarsulm</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3E%F0%9F%93%85%3C/text%3E%3C/svg%3E">
 <style>
   :root { color-scheme: light dark; --rand: #d8dbe0; --gedaempft: #5c6470; --flaeche: #fff; --text: #15181d; }
@@ -100,20 +46,17 @@ export function baueSeite({ spiele, gebautAm, saison, dateiname, mitBesetzung = 
   footer { margin-top: 3rem; color: var(--gedaempft); font-size: .85rem; }
   p.warnung { color: var(--gedaempft); font-size: .9rem; }
   .team { color: var(--gedaempft); font-size: .82rem; margin-top: .2rem; }
-  code { font-size: .82rem; overflow-wrap: anywhere; }
 </style>
 </head>
 <body>
 <main>
-  <h1>${schuetze(name)}</h1>
-  <p class="stand">Saison ${schuetze(saison)} · ${spiele.length} Termine · zuletzt gebaut am ${schuetze(deutschesDatum(gebautAm))} Uhr</p>
+  <h1>Handball: TSB Hunters (Heim) &amp; SU Neckarsulm</h1>
+  <p class="stand">Saison 2026/2027 · 39 Termine · zuletzt gebaut am Sa., 19.09.2026, 20:31 Uhr</p>
 
   <h2>Abonnieren</h2>
   <p>Diese Adresse kopieren:</p>
   <input class="adresse" readonly value="" id="adresse">
   <p><a class="knopf" id="knopf" href="#">Auf iPhone/iPad direkt abonnieren</a></p>
-  <p class="warnung">Zweite Adresse, die ohne GitHub Pages auskommt — sie zeigt direkt auf die
-  Datei im Repo:<br><code>${schuetze(ROH_ADRESSE)}</code></p>
 
   <h2>So geht es am iPhone</h2>
   <ol>
@@ -138,8 +81,80 @@ export function baueSeite({ spiele, gebautAm, saison, dateiname, mitBesetzung = 
   nicht am Kalender selbst.</p>
 
   <h2>Nächste Termine</h2>
-  ${mitBesetzung ? '<p class="warnung">Bei den Heimspielen steht im Termin, wer für Regie und Kamera eingeteilt ist.</p>' : ''}
-  <table><tbody>${zeilen || '<tr><td>Zurzeit stehen keine kommenden Spiele im Plan.</td></tr>'}</tbody></table>
+  <p class="warnung">Bei den Heimspielen steht im Termin, wer für Regie und Kamera eingeteilt ist.</p>
+  <table><tbody>
+      <tr>
+        <td class="wann">Sa 03.10. 16:00</td>
+        <td class="wer"><span class="marke nsu">SU Neckarsulm</span></td>
+        <td>Buxtehuder SV – SU Neckarsulm</td>
+        <td class="ort"></td>
+      </tr>
+      <tr>
+        <td class="wann">Sa 03.10. 20:00</td>
+        <td class="wer"><span class="marke tsb">TSB Hunters</span></td>
+        <td>TSB Hunters – TSV Neuhausen/Filder<div class="team">Regie emefka · Kamera Oliver Amann</div></td>
+        <td class="ort">Stauwehrhalle</td>
+      </tr>
+      <tr>
+        <td class="wann">Mi 07.10. 19:30</td>
+        <td class="wer"><span class="marke nsu">SU Neckarsulm</span></td>
+        <td>SU Neckarsulm – Frisch AUF Göppingen<div class="team">Regie emefka · Kamera Tanja Krieger · Markus Krieger</div></td>
+        <td class="ort"></td>
+      </tr>
+      <tr>
+        <td class="wann">Sa 17.10. 19:30</td>
+        <td class="wer"><span class="marke nsu">SU Neckarsulm</span></td>
+        <td>TuS Metzingen – SU Neckarsulm</td>
+        <td class="ort"></td>
+      </tr>
+      <tr>
+        <td class="wann">Sa 24.10. 20:00</td>
+        <td class="wer"><span class="marke tsb">TSB Hunters</span></td>
+        <td>TSB Hunters – TV Bittenfeld II<div class="team">Regie emefka · Kamera Oliver Amann</div></td>
+        <td class="ort">Stauwehrhalle</td>
+      </tr>
+      <tr>
+        <td class="wann">Sa 31.10. 15:00</td>
+        <td class="wer"><span class="marke nsu">SU Neckarsulm</span></td>
+        <td>SU Neckarsulm – HSG Blomberg-Lippe<div class="team">Regie emefka · Kamera Tanja Krieger · Markus Krieger</div></td>
+        <td class="ort"></td>
+      </tr>
+      <tr>
+        <td class="wann">Mi 11.11. 18:00</td>
+        <td class="wer"><span class="marke nsu">SU Neckarsulm</span></td>
+        <td>BSV Sachsen Zwickau – SU Neckarsulm</td>
+        <td class="ort"></td>
+      </tr>
+      <tr>
+        <td class="wann">Sa 14.11. 20:00</td>
+        <td class="wer"><span class="marke tsb">TSB Hunters</span></td>
+        <td>TSB Hunters – HSG Albstadt<div class="team">Regie emefka · Kamera Oliver Amann</div></td>
+        <td class="ort">Stauwehrhalle</td>
+      </tr>
+      <tr>
+        <td class="wann">Sa 21.11. 18:00</td>
+        <td class="wer"><span class="marke nsu">SU Neckarsulm</span></td>
+        <td>SU Neckarsulm – Thüringer HC<div class="team">Regie emefka · Kamera Tanja Krieger · Markus Krieger</div></td>
+        <td class="ort"></td>
+      </tr>
+      <tr>
+        <td class="wann">Sa 05.12. 20:00</td>
+        <td class="wer"><span class="marke tsb">TSB Hunters</span></td>
+        <td>TSB Hunters – Wölfe Würzburg<div class="team">Regie emefka · Kamera Oliver Amann</div></td>
+        <td class="ort">Stauwehrhalle</td>
+      </tr>
+      <tr>
+        <td class="wann">Sa 12.12. 20:00</td>
+        <td class="wer"><span class="marke tsb">TSB Hunters</span></td>
+        <td>TSB Hunters – TV 1861 Erlangen-Bruck<div class="team">Regie emefka · Kamera Oliver Amann</div></td>
+        <td class="ort">Stauwehrhalle</td>
+      </tr>
+      <tr>
+        <td class="wann">Mi 30.12. 19:00</td>
+        <td class="wer"><span class="marke nsu">SU Neckarsulm</span></td>
+        <td>HC Leipzig – SU Neckarsulm</td>
+        <td class="ort"></td>
+      </tr></tbody></table>
 
   <footer>
     <p>Quellen: <a href="https://tsb-horkheim-hunters.de/calendar">tsb-horkheim-hunters.de</a> (TSB Hunters) und
@@ -151,12 +166,10 @@ export function baueSeite({ spiele, gebautAm, saison, dateiname, mitBesetzung = 
 <script>
   // Adresse aus dem tatsächlichen Aufrufort ableiten, damit sie auch stimmt,
   // wenn die Seite unter einer anderen Adresse liegt.
-  var basis = location.href.replace(/index\\.html$/, '').replace(/[^/]*$/, '');
-  var adresse = basis + ${JSON.stringify(dateiname)};
+  var basis = location.href.replace(/index\.html$/, '').replace(/[^/]*$/, '');
+  var adresse = basis + "handball.ics";
   document.getElementById('adresse').value = adresse;
   document.getElementById('knopf').href = adresse.replace(/^https?:/, 'webcal:');
 </script>
 </body>
 </html>
-`;
-}

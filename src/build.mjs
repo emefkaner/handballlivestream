@@ -14,7 +14,7 @@ import { baueKalender } from './ics.mjs';
 import { baueSeite } from './seite.mjs';
 
 const KENNZEICHEN = 'handballlivestream.emefkaner.github.io';
-const AUSGABE = new URL('../site/', import.meta.url).pathname;
+const AUSGABE = new URL('../docs/', import.meta.url).pathname;
 
 const SPIELPLAN_DATEI = 'handball.ics';
 
@@ -98,7 +98,7 @@ async function main() {
 
   for (const zeile of protokoll) console.log(zeile);
   const mitBesetzung = spiele.filter((s) => s.besetzung).length;
-  console.log(`\nGeschrieben: site/${SPIELPLAN_DATEI}`);
+  console.log(`\nGeschrieben: docs/${SPIELPLAN_DATEI}`);
   console.log(`Termine gesamt: ${spiele.length} (TSB-Heimspiele: ${huntersHeimspiele.length}, Neckarsulm: ${nsuSpiele.length})`);
   console.log(`Davon mit Livestream-Besetzung: ${mitBesetzung}`);
   const naechstes = spiele.find((s) => s.beginn > gebautAm);

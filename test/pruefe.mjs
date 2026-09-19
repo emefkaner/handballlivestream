@@ -80,7 +80,7 @@ for (const zeile of ics.split('\r\n')) {
 }
 pruefe('alle Zeilen halten die Längengrenze ein', ics.split('\r\n').every((z) => Buffer.byteLength(z, 'utf8') <= 75));
 
-const gebaut = new URL('../site/handball.ics', import.meta.url).pathname;
+const gebaut = new URL('../docs/handball.ics', import.meta.url).pathname;
 if (existsSync(gebaut)) {
   console.log('Gebaute Datei');
   const inhalt = readFileSync(gebaut, 'utf8');

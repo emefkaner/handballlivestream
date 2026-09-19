@@ -12,22 +12,27 @@ on:
   # Nach jeder Änderung am Generator.
   push:
     branches: [main]
+    # Der eigene Ergebnis-Commit soll keinen weiteren Lauf auslösen.
+    paths-ignore:
+      - 'docs/**'
   # Und auf Knopfdruck unter "Actions".
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 # Ein Lauf zur Zeit; einen bereits laufenden nicht abbrechen.
 concurrency:
-  group: pages
+  group: kalender
   cancel-in-progress: false
 
 jobs:
   bauen:
     runs-on: ubuntu-latest
+    outputs:
+      pages_bereit: ${{ steps.pages.outcome == 'success' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -45,18 +50,37 @@ jobs:
       - name: Erzeugte Dateien prüfen
         run: npm test
 
-      # enablement schaltet GitHub Pages beim ersten Lauf selbst ein, damit
-      # dafür niemand in die Einstellungen klicken muss.
-      - uses: actions/configure-pages@v5
+      # Der verlässliche Weg: Das Ergebnis liegt im Repo selbst und ist damit
+      # sofort über raw.githubusercontent.com abrufbar — ohne dass jemand
+      # GitHub Pages einrichten muss.
+      - name: Ergebnis ins Repo schreiben
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          if git diff --cached --quiet; then
+            echo "Keine Änderung am Kalender — nichts zu committen."
+          else
+            git commit -m "Kalender aktualisiert ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+            git push
+          fi
+
+      # Der bequemere Weg, falls GitHub Pages eingerichtet ist. Scheitert das,
+      # läuft der Rest trotzdem durch: die Datei liegt ja schon im Repo.
+      - id: pages
+        continue-on-error: true
+        uses: actions/configure-pages@v5
         with:
           enablement: true
 
-      - uses: actions/upload-pages-artifact@v3
+      - if: steps.pages.outcome == 'success'
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: docs
 
   veroeffentlichen:
     needs: bauen
+    if: needs.bauen.outputs.pages_bereit == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
