@@ -17,7 +17,7 @@ X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:hbf-bundesliga-89686@andreas-krieger.handballlivestream.emefkaner.githu
  b.io
-DTSTAMP:20261003T184348Z
+DTSTAMP:20261004T103938Z
 DTSTART:20260829T160000Z
 DTEND:20260829T180000Z
 SUMMARY:SUN gegen HSG Bensheim/Auerbach (Regie)
@@ -33,7 +33,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:tsb-2627DHB3LERMD0202@andreas-krieger.handballlivestream.emefkaner.gith
  ub.io
-DTSTAMP:20261003T184348Z
+DTSTAMP:20261004T103938Z
 DTSTART:20260905T180000Z
 DTEND:20260905T200000Z
 SUMMARY:TSB gegen HC Oppenweiler/Backnang (Regie)
@@ -50,7 +50,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:hbf-bundesliga-89699@andreas-krieger.handballlivestream.emefkaner.githu
  b.io
-DTSTAMP:20261003T184348Z
+DTSTAMP:20261004T103938Z
 DTSTART:20260912T160000Z
 DTEND:20260912T180000Z
 SUMMARY:SUN gegen Buxtehuder SV (Regie)
@@ -58,6 +58,22 @@ DESCRIPTION:SU Neckarsulm – Buxtehuder SV\n1. Bundesliga Frauen\nSpieltag
   3\nEndstand: SU Neckarsulm 26:27 Buxtehuder SV\n\nLivestream-Team\nRegie:
   Andreas Krieger\nKamera 1: Tanja Krieger\nKamera 2: Max\nAnwesenheit: 16:
  00 Uhr\nQuelle: https://www.alsco-hbf.de/
+URL:https://www.alsco-hbf.de/
+CATEGORIES:SU Neckarsulm
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hbf-bundesliga-89762@andreas-krieger.handballlivestream.emefkaner.githu
+ b.io
+DTSTAMP:20261004T103938Z
+DTSTART:20270120T183000Z
+DTEND:20270120T203000Z
+SUMMARY:SUN gegen Borussia Dortmund (Regie)
+DESCRIPTION:SU Neckarsulm – Borussia Dortmund\n1. Bundesliga Frauen\nSpie
+ ltag 13\n\nLivestream-Team\nRegie: Andreas Krieger\nKamera 1: Oliver Amann
+ \nKamera 2: Markus Krieger\nAnwesenheit: 17:30 Uhr\nQuelle: https://www.al
+ sco-hbf.de/
 URL:https://www.alsco-hbf.de/
 CATEGORIES:SU Neckarsulm
 STATUS:CONFIRMED
